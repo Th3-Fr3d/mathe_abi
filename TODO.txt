@@ -1,4 +1,0 @@
- - Rotationsvolumen
- - Abstand Punkt <--> Funktion?
- - Trassierungen
- - Biegelinie
