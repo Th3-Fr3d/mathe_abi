@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt]{article}
-\usepackage[utf8x]{inputenc}
+%\usepackage[utf8x]{inputenc}
 \usepackage{scalerel,stackengine,graphicx,amsmath,amssymb,pgf,gensymb}
 \newcommand\equalhat{\mathrel{\stackon[1.5pt]{=}{\stretchto{%
     \scalerel*[\widthof{=}]{\wedge}{\rule{1ex}{3ex}}}{0.5ex}}}}
@@ -41,6 +41,7 @@ Für $\{a,b,n\} \in \mathbb{R}$ und $\{g,h\}$ als Variable gilt:
 	\subitem $\big{(}\frac{1}{g}\big{)}' = \frac{-g'}{g^2}$
 \item Potenzregel
 	\subitem $(g^n)' = n \cdot g^{n-1}$
+\pagebreak
 \item Kettenregel
 	\subitem \parbox[t]{\linewidth}{$(g \circ h)'(x) = (g(h(x))' = g'(h(x)) \cdot h'(x)$
 		wobei $g'(x)$ die äußere und $h'(x)$ die innere Ableitung ist.\\
@@ -105,23 +106,21 @@ f(x) & = x^3 + 1\\
 \subsection{Rotationsvolumen}
 Beim Rotationsvolumen werden die Grundregel der Integralrechnungen benötigt. Das am Ende berechnete Volumen ist das der Funktion, welche entweder um die x-Achse oder die y-Achse rotiert wurde.
 Die folgende Formel ist Grundlage für die Berechnung:
-\begin{equation}
-V = \pi * \int_{a}^z (f(x))^2\ dx
-\end{equation}
+$$V = \pi \cdot \int_{a}^z (f(x))^2\ dx$$
 Mit dieser Formel zur Hand können wir eine Funktion $f(x)$ untersuchen.
 Zum Zweck der Berechnung benutzen wir einen Halbkreis, dessen Funktion $f(x) = \sqrt{9 - x^2}$ ist.
 Zum Zwecke der Berechnung gehen wir des weiteren davon aus (da diese breits berechnet wurden), dass die Nullstellen der Funktion 3 und -3 sind.
 \begin{equation}
 \begin{split}
-f(x) = \sqrt{9 - x^2}\\
-V = \pi * \int_{-3}^3 (f(x)^2)\ dx\\
-V = \pi * \int_{-3}^3 (\sqrt{9 - x^2})^2)\ dx\\
-V = \pi * \int_{-3}^3 (9 - x^2)\ dx\\
-V = \pi * \Bigg{[}9x - \frac{3^x}{3}\Bigg{]}_{-3}^{3} dx\\
-V = \pi * \Bigg{[}\Bigg{(}9 * 3 - \frac{3^3}{3}\Bigg{)} - \Bigg{(}9 * -3 - \frac{(-3)^3}{3}\Bigg{)}\Bigg{]}\\
-V = \pi * \Bigg{[}\Bigg{(} 27 - \frac{27}{3} \Bigg{)} - \Bigg{(} -27 - \frac{-27}{3} \Bigg{)}\Bigg{]}\\
-V = \pi * [(27 - 9) - (-27 + 9)]\\
-V = \pi * [18 + 18] = \underline{\underline{36\pi}}\\
+f(x) & = \sqrt{9 - x^2}\\
+V & = \pi \cdot \int_{-3}^3 (f(x)^2)\ dx\\
+V & = \pi \cdot \int_{-3}^3 (\sqrt{9 - x^2})^2)\ dx\\
+V & = \pi \cdot \int_{-3}^3 (9 - x^2)\ dx\\
+V & = \pi \cdot \Bigg{[}9x - \frac{3^x}{3}\Bigg{]}_{-3}^{3} dx\\
+V & = \pi \cdot \Bigg{[}\Bigg{(}9 \cdot 3 - \frac{3^3}{3}\Bigg{)} - \Bigg{(}9 \cdot -3 - \frac{(-3)^3}{3}\Bigg{)}\Bigg{]}\\
+V & = \pi \cdot \Bigg{[}\Bigg{(} 27 - \frac{27}{3} \Bigg{)} - \Bigg{(} -27 - \frac{-27}{3} \Bigg{)}\Bigg{]}\\
+V & = \pi \cdot [(27 - 9) - (-27 + 9)]\\
+V & = \pi \cdot [18 + 18] = \underline{\underline{36\pi}}
 \end{split}    
 \end{equation}
 \pagebreak
