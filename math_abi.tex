@@ -50,9 +50,53 @@ Für $\{a,b,n\} \in \mathbb{R}$ und $\{g,h\}$ als Variable gilt:
 		$$h'(x) = 3x^2$$
 		Da $f'(x) = g'(h(x)) \cdot h'(x)$ ergibt sich
 		$$f'(x) = 2(x^3 + 1) \cdot 3x^2$$}
+\end{itemize}
+\pagebreak
 \subsection{Integralrechnung}
 Die Aufleitung $F(x)$ einer Funktion $f(x)$ beschreibt die Fläche unter der Funktion $F(x)$.
-\end{itemize}
+Um die Fläche von $x_{min}$ bis $x_{max}$ unter der Funktion $f(x)$ zu bestimmen, berechnet man:
+$$\int_{x_{min}}^{x_{max}} f(x)\ dx = F(x_{max}) - F(x_{min}) = [F(x)]_{x_{min}}^{x_{max}}$$
+\textbf{Beispiel}:\\
+Gegeben sei $f(x) = 2x^3 + 4x + 2$, $x_{min} = 1$ und $x_{max} = 5$.
+\begin{equation}
+\begin{split}
+f(x) & = 2x^3 + 4x + 2\\
+\int_1^5 f(x)\ dx & = F(5) - F(1)\\
+\int_1^5 f(x)\ dx & = \Bigg{[}\frac{2}{4}x^4 + 2x^2 + 2x\Bigg{]}_1^5\\
+\int_1^5 f(x)\ dx & = \Bigg{(}\frac{2}{4} \cdot 5^4 + 2\cdot 5^2 + 2 \cdot 5\Bigg{)} - \Bigg{(}\frac{2}{4} \cdot 1^4 + 2\cdot 1^2 + 2 \cdot 1\Bigg{)}\\
+\int_1^5 f(x)\ dx & = 372.5 - 4.5\\
+\int_1^5 f(x)\ dx & = \underline{\underline{368}}
+\end{split}
+\end{equation}
+\subsubsection{1. Sonderfall: $x_{min} = 0$}
+Wenn $x_{min} = 0$ ist, dann ist $F(x_{min}) = 0$, dashalb kann die Untergrenze vernachlässigt werden.
+Gegeben sei $f(x) = 2x^3 + 4x + 2$, $x_{min} = 0$ und $x_{max} = 5$.
+\begin{equation}
+\begin{split}
+f(x) & = 2x^3 + 4x + 2\\
+\int_0^5 f(x)\ dx & = F(5) - F(0)\\
+\int_0^5 f(x)\ dx & = \Bigg{[}\frac{2}{4}x^4 + 2x^2 + 2x\Bigg{]}_0^5\\
+\int_0^5 f(x)\ dx & = \Bigg{(}\frac{2}{4} \cdot 5^4 + 2\cdot 5^2 + 2 \cdot 5\Bigg{)} - 0\\
+\int_0^5 f(x)\ dx & = \underline{\underline{372.5}}
+\end{split}
+\end{equation}
+\subsubsection{2. Sonderfall: Nullstellen}
+Befindet sich eine oder mehrere Nullstelle(n) zwischen $x_{min}$ und $x_{max}$, so muss die Fläche an diesen geteilt und deren Beträge anschließend aufsummiert werden, 
+da es sich bei dem Abschnitt, bei dem gilt $f(x) < 0$, sonst um eine "negative Fläche" handeln würde. Bei einer Funktion $f(x) = x^3 + 1$ mit einer Nullstelle 
+$x_0$ bei $x = 1$ müssen die Ober und Untergrenzen zur bestimmung der Intervals von $x_{min} = -1$ bis $x_{max} = 5$ wie folgt gelegt werden:
+\begin{equation}
+\begin{split}
+f(x) & = x^3 + 1\\
+\int_{-1}^5 f(x)\ dx & = \Bigg{|} \int_{-1}^1 f(x)\ dx \Bigg{|} + \Bigg{|} \int_1^5 f(x)\ dx\Bigg{|}\\
+\int_{-1}^5 f(x)\ dx & = | F(1) - F(-1) | + | F(5) - F(1) |\\
+\int_{-1}^5 f(x)\ dx & = \Bigg{|}\Bigg{[}\frac{x^4}{4} + x\Bigg{]}_{-1}^1\Bigg{|} + \Bigg{|}\Bigg{[}\frac{x^4}{4} + x\Bigg{]}_1^5\Bigg{|}\\
+\int_{-1}^5 f(x)\ dx & = \Bigg{|}\Bigg{(}\frac{1^4}{4} + 1\Bigg{)} - \Bigg{(}\frac{(-1)^4}{4} + (-1)\Bigg{)}\Bigg{|} + \\
+&\ \ \ \ \Bigg{|}\Bigg{(}\frac{5^4}{4} + 5 \Bigg{)} - \Bigg{(}\frac{1^4}{4} + 1\Bigg{)}\Bigg{|}\\
+\int_{-1}^5 f(x)\ dx & = \Bigg{|} 1.25 - (-1.25)\Bigg{|} + \Bigg{|} 161.25 - 1.25\Bigg{|}\\
+\int_{-1}^5 f(x)\ dx & = \underline{\underline{162.5}}
+\end{split}
+\end{equation}
+\pagebreak
 \section{Kurvendiskussionen}
 Die Funktion $f(x)$ soll untersucht werden.
 \subsection{Symmetrie}
