@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 %\usepackage[utf8x]{inputenc}
-\usepackage{scalerel,stackengine,graphicx,amsmath,amssymb,pgf,gensymb}
+\usepackage{scalerel,stackengine,graphicx,amsmath,amssymb,pgf,gensymb,booktabs}
 \newcommand\equalhat{\mathrel{\stackon[1.5pt]{=}{\stretchto{%
     \scalerel*[\widthof{=}]{\wedge}{\rule{1ex}{3ex}}}{0.5ex}}}}
 \newcommand*{\Parallelogramm}[1][]{%
@@ -166,6 +166,110 @@ Wobei gilt:
 \end{itemize}
 \subsubsection{Wendepunkt}
 $$P_{W} = (f'''(x_0) | f(f'''(x_0)))$$
+\pagebreak
+\section{Biegelinien}
+\subsection{Wichtige Variablen}
+\begin{itemize}
+\item Elastizitätsmodul $E$:
+	\subitem Werkstoffspezifischer Wert in $\frac{N}{m^2}$
+\item Flächenträgheitsmoment $I$:
+	\parbox[t]{\linewidth}{
+	Formspezifischer Wert in $m^4$}
+\item Streckenlast $q(x)$:
+	\subitem \parbox[t]{\linewidth}{
+	\begin{equation}
+	\begin{split}
+	w''''(x) & = \frac{1}{E \cdot I}q(x)\\
+	w''''(x) & = \frac{1}{E \cdot I} \cdot q
+	\end{split}
+	\end{equation}
+	in Newton pro Meter $\frac{N}{m}$}
+\item Querkraft $Q(x)$:
+	\subitem \parbox[t]{\linewidth}{
+	\begin{equation}
+	\begin{split}
+	w'''(x) & = \frac{1}{E \cdot I}-Q(x)\\
+	w'''(x) & = \frac{1}{E \cdot I}\cdot (qx + c_1)
+	\end{split}
+	\end{equation}
+	in Newton $N$}
+\item Biegemoment $w''(x)$:
+	\subitem \parbox[t]{\linewidth}{
+	\begin{equation}
+	\begin{split}
+	w''(x) & = \frac{1}{E \cdot I}-M(x)\\
+	w''(x) & = \frac{1}{E \cdot I}\cdot (\frac{1}{2} qx^2 + c_1 \cdot x + c_2)
+	\end{split}
+	\end{equation}
+	}
+	in Newtonmeter $Nm$
+\item Steigung der Biegelinie $w'(x)$
+	\subitem $$w'(x) = \frac{1}{E \cdot I}\cdot (\frac{1}{6} qx^3 + \frac{1}{2} c_1x^2 + c_2x + c_3)$$
+\item Biegelinie $w(x)$
+	\subitem \parbox[t]{\linewidth}{ 
+	$$w(x) = \frac{1}{E \cdot I}\cdot (\frac{1}{24} qx^4 + \frac{1}{6} c_1x^3 + \frac{1}{6} c_2x^2 + c_3x + c_4)$$
+	in Meter $m$}
+\end{itemize}
+\begin{table}[h!]
+  \begin{center}
+    \caption{Ermittlung der Integrationskonstanten}
+    \label{tab:table2}
+    \begin{tabular}{l|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \textbf{Art der Randbedingung} & \textbf{Biegung $w$} & \textbf{Steigung $w'$} & \textbf{Moment $w''$} & \textbf{Querkraft $w'''$}\\
+      \hline
+      Festlager / Loslager & 0 & $\neq 0$ & 0 & $\neq 0$\\
+      \hline
+      Einspannung & 0 & 0 & $\neq 0$ & $\neq 0$\\
+    \end{tabular}
+  \end{center}
+\end{table}
+\pagebreak
+\subsection{Mathematischer Ansatz \& Beispiel}
+Gegeben sei ein Träger für den gilt:
+\begin{equation}
+\begin{split}
+E & = 200 \cdot 10^9 \frac{N}{m^2}\\
+I & = \frac{1}{12}(B \cdot H^3 - b \cdot h^3)\\
+B & = 0.3\\
+H & = 0.5\\
+b & = 0.27\\
+h & = 0.47\\
+q(x) & = -8000 \frac{N}{m}
+\end{split}
+\end{equation}
+Des Weiteren ist ein Festlager bei $x = 0$ und ein Loslager bei $x = 10$ bekannt.
+Es soll überprüft werden, ob das Biegemoment eines Trägers den Betrag von $150000 Nm$ überschreitet.
+Es lassen sich folgende Bedingungen aufstellen:
+\begin{equation}
+\begin{split}
+w(0) & = 0\\
+w''(0) & = 0 \Rightarrow \frac{1}{e \cdot I} \cdot c_2 \Rightarrow \underline{\underline{c_2 = 0}}\\
+w(10) & = 0\\
+w''(10) & = 0 \Rightarrow \frac{1}{e \cdot I} \cdot (\frac{1}{2} \cdot (-8000) \cdot 10^2 + 10 \cdot c_1 = 0)\\
+0 & = -400000 + 10 \cdot c_1\\
+c_1 & = 40000
+\end{split}
+\end{equation}
+
+Somit ist das Biegemoment $- M(x) = - \frac{1}{2} \cdot 8000x^2 + 40000x$ bzw $M(x) = \frac{1}{2} \cdot 8000x^2 - 40000x$ bekannt.
+Um die $x$-Stelle des maximale Biegemoment zu bestimmen wird $M'(x) = 0$ gesetzt.
+\begin{equation}
+\begin{split}
+M'(x) & = 0\\
+0 = 8000x - 40000\\
+x = 5
+\end{split}
+\end{equation}
+Somit ist uns bekannt, dass das maximale Biegemoment bei $x = 5$ vorliegt.
+Nun berechnen wir das Biegemoment an $x = 5$.
+\begin{equation}
+\begin{split}
+M(5) = 4000 \cdot 5^2 - 40000 \cdot 5\\
+M(5) = -100000
+\end{split}
+\end{equation}
+Somit hält der Träger, da
+$$|-100000| < 150000$$
 \section{Wachstumsfunktionen}
 
 
