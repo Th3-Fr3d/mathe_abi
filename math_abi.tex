@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt]{article}
-%\usepackage[utf8x]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage{scalerel,stackengine,graphicx,amsmath,amssymb,pgf,gensymb,booktabs}
 \newcommand\equalhat{\mathrel{\stackon[1.5pt]{=}{\stretchto{%
     \scalerel*[\widthof{=}]{\wedge}{\rule{1ex}{3ex}}}{0.5ex}}}}
@@ -110,6 +110,8 @@ $$V = \pi \cdot \int_{a}^z (f(x))^2\ dx$$
 Mit dieser Formel zur Hand können wir eine Funktion $f(x)$ untersuchen.
 Zum Zweck der Berechnung benutzen wir einen Halbkreis, dessen Funktion $f(x) = \sqrt{9 - x^2}$ ist.
 Zum Zwecke der Berechnung gehen wir des weiteren davon aus (da diese breits berechnet wurden), dass die Nullstellen der Funktion 3 und -3 sind.
+Beweis: $f(-3) = \sqrt{9- (-3)^2} = \sqrt{9 - 9} = 0$ | $f(3) = \sqrt{9- 3^2} = \sqrt{9 - 9} = 0$ .
+Dann lässt sich auf folgende Weise das Volumen der rotierenden Halbkreisfunktion bestimmen:
 \begin{equation}
 \begin{split}
 f(x) & = \sqrt{9 - x^2}\\
@@ -122,6 +124,23 @@ V & = \pi \cdot \Bigg{[}\Bigg{(} 27 - \frac{27}{3} \Bigg{)} - \Bigg{(} -27 - \fr
 V & = \pi \cdot [(27 - 9) - (-27 + 9)]\\
 V & = \pi \cdot [18 + 18] = \underline{\underline{36\pi}}
 \end{split}    
+\end{equation}
+\subsubsection{Y-Achsenrotation}
+Ein besonderer Fall ist die bereits erwähnte Rotation um die y-Achse. Hierbei muss man wissen, dass die Funktion umgestellt werden muss.
+Geben wir nun vor, dass wir eine Funktion haben die $f(x) = x^3 + 4$ ist, dann kann man diese ganz einfach umstellen:
+\begin{equation}
+\begin{split}
+f(x) = y = x^3 \cdot 4\\
+y - 4 = x^3\\
+\sqrt[3]{y - 4} = x\\
+\end{split}
+\end{equation}
+Der Schnittpunkt mit der y-Achse ist ablesbar aus der Orginalfunktion und ist $y = 4$.
+Wir wollen die Volumen von dem y-Achsenabschnitt bis zur -1 berechnen. Demnach gilt für unser Integral $\pi \cdot \int_{-1}^{4} \Bigg{(}\sqrt[3]{y - 4}\Bigg{)}^2 dy$ .
+Die Brechnung für das Volumen sieht wie folgt aus:
+\begin{equation}
+\begin{split}
+\end{split}
 \end{equation}
 \pagebreak
 \section{Kurvendiskussionen}
