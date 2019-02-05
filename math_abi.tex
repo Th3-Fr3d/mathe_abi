@@ -136,10 +136,17 @@ y - 4 = x^3\\
 \end{split}
 \end{equation}
 Der Schnittpunkt mit der y-Achse ist ablesbar aus der Orginalfunktion und ist $y = 4$.
-Wir wollen die Volumen von dem y-Achsenabschnitt bis zur -1 berechnen. Demnach gilt für unser Integral $\pi \cdot \int_{-1}^{4} \Bigg{(}\sqrt[3]{y - 4}\Bigg{)}^2 dy$ .
+Wir wollen die Volumen von dem y-Achsenabschnitt bis zur -1 berechnen. Demnach gilt für unser Integral $\pi \cdot \int_{-1}^{4} (\sqrt[3]{y - 4})^2 dy$ .
 Die Brechnung für das Volumen sieht wie folgt aus:
 \begin{equation}
 \begin{split}
+V = \pi \cdot \int_{-1}^{4} \Bigg{(}\sqrt[3]{y - 4}\Bigg{)}^2 dy\\
+V = \pi \cdot \int_{-1}^{4} (y - 4)^{\frac{2}{3}} dy\\
+V = \pi \cdot \Bigg{[} \frac{3\cdot(y-4)^\frac{5}{3}}{5}\Bigg{]}_{-1}^{4} dy\\
+V = \pi \cdot \Bigg{[} \Bigg{(} \frac{3\cdot(4-4)^\frac{5}{3}}{5}\Bigg{)} - \Bigg{(} \frac{3\cdot((-1)-4)^\frac{5}{3}}{5}\Bigg{)} \Bigg{]}\\
+V = \pi \cdot \Bigg{[} \Bigg{(} \frac{3\cdot0^\frac{5}{3}}{5}\Bigg{)} - \Bigg{(} \frac{3\cdot(-5)^\frac{5}{3}}{5}\Bigg{)} \Bigg{]}\\
+V = \pi \cdot \Bigg{[} - \Bigg{(} -3\cdot5^\frac{2}{3}\Bigg{)} \Bigg{]}\\
+V = \underline{\underline{\pi \cdot 3 \cdot 5^\frac{2}{3}}}
 \end{split}
 \end{equation}
 \pagebreak
