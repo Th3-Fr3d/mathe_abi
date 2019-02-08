@@ -110,7 +110,13 @@ $$V = \pi \cdot \int_{a}^z (f(x))^2\ dx$$
 Mit dieser Formel zur Hand können wir eine Funktion $f(x)$ untersuchen.
 Zum Zweck der Berechnung benutzen wir einen Halbkreis, dessen Funktion $f(x) = \sqrt{9 - x^2}$ ist.
 Zum Zwecke der Berechnung gehen wir des weiteren davon aus (da diese breits berechnet wurden), dass die Nullstellen der Funktion 3 und -3 sind.
-Beweis: $f(-3) = \sqrt{9- (-3)^2} = \sqrt{9 - 9} = 0$ | $f(3) = \sqrt{9- 3^2} = \sqrt{9 - 9} = 0$ .
+Beweis: 
+\begin{equation}
+\begin{split}
+f(-3) & = \sqrt{9- (-3)^2} = \sqrt{9 - 9} = 0 \\
+f(3) & = \sqrt{9- 3^2}\ \ \ \ \ = \sqrt{9 - 9} = 0
+\end{split}    
+\end{equation}
 Dann lässt sich auf folgende Weise das Volumen der rotierenden Halbkreisfunktion bestimmen:
 \begin{equation}
 \begin{split}
@@ -125,14 +131,15 @@ V & = \pi \cdot [(27 - 9) - (-27 + 9)]\\
 V & = \pi \cdot [18 + 18] = \underline{\underline{36\pi}}
 \end{split}    
 \end{equation}
+\pagebreak
 \subsubsection{Y-Achsenrotation}
 Ein besonderer Fall ist die bereits erwähnte Rotation um die y-Achse. Hierbei muss man wissen, dass die Funktion umgestellt werden muss.
 Geben wir nun vor, dass wir eine Funktion haben die $f(x) = x^3 + 4$ ist, dann kann man diese ganz einfach umstellen:
 \begin{equation}
 \begin{split}
-f(x) = y = x^3 \cdot 4\\
-y - 4 = x^3\\
-\sqrt[3]{y - 4} = x\\
+f(x) = y & = x^3 + 4\\
+y - 4 & = x^3\\
+\sqrt[3]{y - 4} & = x\\
 \end{split}
 \end{equation}
 Der Schnittpunkt mit der y-Achse ist ablesbar aus der Orginalfunktion und ist $y = 4$.
@@ -140,13 +147,13 @@ Wir wollen die Volumen von dem y-Achsenabschnitt bis zur -1 berechnen. Demnach g
 Die Brechnung für das Volumen sieht wie folgt aus:
 \begin{equation}
 \begin{split}
-V = \pi \cdot \int_{-1}^{4} \Bigg{(}\sqrt[3]{y - 4}\Bigg{)}^2 dy\\
-V = \pi \cdot \int_{-1}^{4} (y - 4)^{\frac{2}{3}} dy\\
-V = \pi \cdot \Bigg{[} \frac{3\cdot(y-4)^\frac{5}{3}}{5}\Bigg{]}_{-1}^{4} dy\\
-V = \pi \cdot \Bigg{[} \Bigg{(} \frac{3\cdot(4-4)^\frac{5}{3}}{5}\Bigg{)} - \Bigg{(} \frac{3\cdot((-1)-4)^\frac{5}{3}}{5}\Bigg{)} \Bigg{]}\\
-V = \pi \cdot \Bigg{[} \Bigg{(} \frac{3\cdot0^\frac{5}{3}}{5}\Bigg{)} - \Bigg{(} \frac{3\cdot(-5)^\frac{5}{3}}{5}\Bigg{)} \Bigg{]}\\
-V = \pi \cdot \Bigg{[} - \Bigg{(} -3\cdot5^\frac{2}{3}\Bigg{)} \Bigg{]}\\
-V = \underline{\underline{\pi \cdot 3 \cdot 5^\frac{2}{3}}}
+V & = \pi \cdot \int_{-1}^{4} \Bigg{(}\sqrt[3]{y - 4}\Bigg{)}^2 dy\\
+V & = \pi \cdot \int_{-1}^{4} (y - 4)^{\frac{2}{3}} dy\\
+V & = \pi \cdot \Bigg{[} \frac{3\cdot(y-4)^\frac{5}{3}}{5}\Bigg{]}_{-1}^{4} dy\\
+V & = \pi \cdot \Bigg{[} \Bigg{(} \frac{3\cdot(4-4)^\frac{5}{3}}{5}\Bigg{)} - \Bigg{(} \frac{3\cdot((-1)-4)^\frac{5}{3}}{5}\Bigg{)} \Bigg{]}\\
+V & = \pi \cdot \Bigg{[} \Bigg{(} \frac{3\cdot0^\frac{5}{3}}{5}\Bigg{)} - \Bigg{(} \frac{3\cdot(-5)^\frac{5}{3}}{5}\Bigg{)} \Bigg{]}\\
+V & = \pi \cdot \Bigg{[} - \Bigg{(} -3\cdot5^\frac{2}{3}\Bigg{)} \Bigg{]}\\
+V & = \underline{\underline{\pi \cdot 3 \cdot 5^\frac{2}{3}}}
 \end{split}
 \end{equation}
 \pagebreak
@@ -227,8 +234,7 @@ $$P_{W} = (f'''(x_0) | f(f'''(x_0)))$$
 	w''(x) & = \frac{1}{E \cdot I}\cdot (\frac{1}{2} qx^2 + c_1 \cdot x + c_2)
 	\end{split}
 	\end{equation}
-	}
-	in Newtonmeter $Nm$
+	in Newtonmeter $Nm$}
 \item Steigung der Biegelinie $w'(x)$
 	\subitem $$w'(x) = \frac{1}{E \cdot I}\cdot (\frac{1}{6} qx^3 + \frac{1}{2} c_1x^2 + c_2x + c_3)$$
 \item Biegelinie $w(x)$
@@ -241,11 +247,14 @@ $$P_{W} = (f'''(x_0) | f(f'''(x_0)))$$
     \caption{Ermittlung der Integrationskonstanten}
     \label{tab:table2}
     \begin{tabular}{l|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-      \textbf{Art der Randbedingung} & \textbf{Biegung $w$} & \textbf{Steigung $w'$} & \textbf{Moment $w''$} & \textbf{Querkraft $w'''$}\\
+      \textbf{Art der} & \textbf{Biegung} & \textbf{Steigung} & \textbf{Moment} & \textbf{Querkraft}\\
+      \textbf{Randbedingung} & $w$ & $w'$ & $w''$ & $w'''$\\
       \hline
       Festlager / Loslager & 0 & $\neq 0$ & 0 & $\neq 0$\\
       \hline
       Einspannung & 0 & 0 & $\neq 0$ & $\neq 0$\\
+      \hline
+      Loses Ende & $\neq 0$ & $\neq 0$ & 0 & 0\\
     \end{tabular}
   \end{center}
 \end{table}
@@ -271,27 +280,26 @@ Es lassen sich folgende Bedingungen aufstellen:
 w(0) & = 0\\
 w''(0) & = 0 \Rightarrow \frac{1}{e \cdot I} \cdot c_2 \Rightarrow \underline{\underline{c_2 = 0}}\\
 w(10) & = 0\\
-w''(10) & = 0 \Rightarrow \frac{1}{e \cdot I} \cdot (\frac{1}{2} \cdot (-8000) \cdot 10^2 + 10 \cdot c_1 = 0)\\
+w''(10) & = 0 \Rightarrow 0 = \frac{1}{e \cdot I} \cdot \Bigg{(}\frac{1}{2} \cdot (-8000) \cdot 10^2 + 10 \cdot c_1\Bigg{)}\\
 0 & = -400000 + 10 \cdot c_1\\
 c_1 & = 40000
 \end{split}
 \end{equation}
-
 Somit ist das Biegemoment $- M(x) = - \frac{1}{2} \cdot 8000x^2 + 40000x$ bzw $M(x) = \frac{1}{2} \cdot 8000x^2 - 40000x$ bekannt.
 Um die $x$-Stelle des maximale Biegemoment zu bestimmen wird $M'(x) = 0$ gesetzt.
 \begin{equation}
 \begin{split}
 M'(x) & = 0\\
-0 = 8000x - 40000\\
-x = 5
+8000x - 40000 & = 0\\
+x & = 5
 \end{split}
 \end{equation}
 Somit ist uns bekannt, dass das maximale Biegemoment bei $x = 5$ vorliegt.
 Nun berechnen wir das Biegemoment an $x = 5$.
 \begin{equation}
 \begin{split}
-M(5) = 4000 \cdot 5^2 - 40000 \cdot 5\\
-M(5) = -100000
+M(5) & = 4000 \cdot 5^2 - 40000 \cdot 5\\
+M(5) & = -100000
 \end{split}
 \end{equation}
 Somit hält der Träger, da
