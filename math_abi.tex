@@ -11,6 +11,10 @@
     \pgfpathrectangle{\pgfpointorigin}{\pgfpoint{.60em}{.65em}}%
     \pgfusepath{stroke,#1}%
   \endpgfpicture}
+\makeatletter
+\newcommand{\vast}{\bBigg@{4}}
+\newcommand{\Vast}{\bBigg@{5}}
+\makeatother
 \begin{document}
 \author{
 	Frederik Höft\\
@@ -224,7 +228,7 @@ Dabei wird unterteilt in:
 		g'(P_x) &  = f'(P_x)
 		\end{split}
 		\end{equation}
-		und $g(x)$ und $f(x)$ im Punkt $P$ die selbe Steigung haben.
+		und $g(x)$ und $f(x)$ im Punkt $P$ die selbe Steigung haben. Somit handelt ees sich bei der gesuchten Funktion $f(x)$ um eine Funktion 3. Grades.
 	}
 \item Krümmungsruckfreier Übergang
 	\subitem \parbox[t]{\linewidth}
@@ -237,7 +241,7 @@ Dabei wird unterteilt in:
 		g''(P_x) & = f''(P_x)
 		\end{split}
 		\end{equation}
-		und $g(x)$ und $f(x)$ im Punkt $P$ die selbe Steigung und den selben Krümmungskreis haben.
+		und $g(x)$ und $f(x)$ im Punkt $P$ die selbe Steigung und den selben Krümmungskreis haben. Somit handelt ees sich bei der gesuchten Funktion $f(x)$ um eine Funktion 5. Grades.
 	}
 \end{itemize}
 \pagebreak
@@ -246,7 +250,58 @@ Die beiden Funktionen $g(x) = 3x-2, x \leq 1$ und $h(x) = 4, x \geq 3$ sollen kn
 \begin{center}
 \includegraphics[width=0.5\textwidth]{image1.png}
 \end{center}
-
+Somit handelt es sich bei der gesuchten Funktion um
+\begin{equation}
+\begin{split}
+f(x) & = ax^3 + bx^2 + cx + d\\
+f'(x) & = 3ax^2 + 2bx + c
+\end{split}
+\end{equation}
+mit den folgenden Bedingungen:
+\begin{equation}
+\begin{split}
+g(1) & = f(1)\\
+h(3) & = f(3)\\
+g'(1) & = f'(1)\\
+h'(1) & = f'(1)
+\end{split}
+\end{equation}
+Daraus lässt sich folgendes Gleichungssystem aufstellen:
+\begin{equation}
+\begin{split}
+3\cdot 1-2 & = a\cdot 1^3 + b\cdot 1^2 + c\cdot 1 + d\\
+4 & = a\cdot 3^3 + b\cdot 3^2 + c\cdot 3 + d\\
+3 & = 3a\cdot 1^2 + 2b \cdot 1 + c\\
+0 & = 3a\cdot 3^2 + 2b\cdot 3 + c
+\end{split}
+\end{equation}
+Welches sich mit dem CAS lösen lässt:
+\[
+solve \Vast(
+\begin{cases}
+1 = a + b + c + d\\
+4 = a\cdot 3^3 + b\cdot 3^2 + c\cdot 3 + d\\
+3 = 3a + 2b  + c\\
+0 = 3a\cdot 3^2 + 2b\cdot 3 + c
+\end{cases}
+,\{a,b,c,d\}\Vast)
+\]
+Als Ergebnis erhalten wir:
+\begin{equation}
+\begin{split}
+a & = 0\\
+b & = -0.75\\
+c & = 4.5\\
+d & = -2.75
+\end{split}
+\end{equation}
+Somit ergibt sich für $f(x)$:
+$$f(x) = -0.75x^2 + 4.5x - 2.75$$
+Eingezeichnet in das Koordinatensystem:
+\begin{center}
+\includegraphics[width=0.75\textwidth]{image2.png}
+\end{center}
+\pagebreak
 \section{Biegelinien}
 \subsection{Wichtige Variablen}
 \begin{itemize}
