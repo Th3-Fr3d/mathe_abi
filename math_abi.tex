@@ -1,6 +1,8 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8x]{inputenc}
-\usepackage{scalerel,stackengine,graphicx,amsmath,amssymb,pgf,gensymb,booktabs}
+\usepackage{scalerel,stackengine,graphicx,amsmath,amssymb,pgf,gensymb,booktabs,wrapfig,lipsum}
+\usepackage[english]{babel}
+\graphicspath{{./images/}}
 \newcommand\equalhat{\mathrel{\stackon[1.5pt]{=}{\stretchto{%
     \scalerel*[\widthof{=}]{\wedge}{\rule{1ex}{3ex}}}{0.5ex}}}}
 \newcommand*{\Parallelogramm}[1][]{%
@@ -103,7 +105,7 @@ f(x) & = x^3 + 1\\
 \end{split}
 \end{equation}
 \pagebreak
-\subsection{Rotationsvolumen}
+\section{Rotationsvolumen}
 Beim Rotationsvolumen werden die Grundregel der Integralrechnungen benötigt. Das am Ende berechnete Volumen ist das der Funktion, welche entweder um die x-Achse oder die y-Achse rotiert wurde.
 Die folgende Formel ist Grundlage für die Berechnung:
 $$V = \pi \cdot \int_{a}^z (f(x))^2\ dx$$
@@ -132,7 +134,7 @@ V & = \pi \cdot [18 + 18] = \underline{\underline{36\pi}}
 \end{split}    
 \end{equation}
 \pagebreak
-\subsubsection{Y-Achsenrotation}
+\subsection{Y-Achsenrotation}
 Ein besonderer Fall ist die bereits erwähnte Rotation um die y-Achse. Hierbei muss man wissen, dass die Funktion umgestellt werden muss.
 Geben wir nun vor, dass wir eine Funktion haben die $f(x) = x^3 + 4$ ist, dann kann man diese ganz einfach umstellen:
 \begin{equation}
@@ -200,13 +202,58 @@ Wobei gilt:
 \subsubsection{Wendepunkt}
 $$P_{W} = (f'''(x_0) | f(f'''(x_0)))$$
 \pagebreak
+\section{Trassierung}
+\subsection{Mathematischer Ansatz}
+Das Ziel von Trassierungen ist es, zwei abschnittsweise definierte Funktionen $g(x)$ und $h(x)$ mit einer Funktion $f(x)$ zu verbinden.
+Dabei wird unterteilt in:
+\begin{itemize}
+\item Nahtloser Übergang
+	\subitem \parbox[t]{\linewidth}
+	{
+		Ein Übergang wird als nahtlos bezeichnet, wenn für einen Punkt $P$ am Rand des Definitionsbereiches von $g(x)$ gilt:
+		$$g(P_x) = f(P_x)$$
+		und $g(x)$ und $f(x)$ somit den selben Punkt $P$ teilen.
+	}
+\item Knickfreier Übergang
+	\subitem \parbox[t]{\linewidth}
+	{
+		Ein Übergang wird als knickfrei bezeichnet, wenn für einen Punkt $P$ am Rand des Definitionsbereiches von $g(x)$ gilt:
+		\begin{equation}
+		\begin{split}
+		g(P_x) & = f(P_x)\\
+		g'(P_x) &  = f'(P_x)
+		\end{split}
+		\end{equation}
+		und $g(x)$ und $f(x)$ im Punkt $P$ die selbe Steigung haben.
+	}
+\item Krümmungsruckfreier Übergang
+	\subitem \parbox[t]{\linewidth}
+	{
+		Ein Übergang wird als krümmungsruckfrei bezeichnet, wenn für einen Punkt $P$ am Rand des Definitionsbereiches von $g(x)$ gilt:
+		\begin{equation}
+		\begin{split}
+		g(P_x) & = f(P_x)\\
+		g'(P_x) &  = f'(P_x)\\
+		g''(P_x) & = f''(P_x)
+		\end{split}
+		\end{equation}
+		und $g(x)$ und $f(x)$ im Punkt $P$ die selbe Steigung und den selben Krümmungskreis haben.
+	}
+\end{itemize}
+\pagebreak
+\subsection{Beispiel}
+Die beiden Funktionen $g(x) = 3x-2, x \leq 1$ und $h(x) = 4, x \geq 3$ sollen knickfrei mit einander verbunden werden.
+\begin{center}
+\includegraphics[width=0.5\textwidth]{image1.png}
+\end{center}
+
 \section{Biegelinien}
 \subsection{Wichtige Variablen}
 \begin{itemize}
 \item Elastizitätsmodul $E$:
 	\subitem Werkstoffspezifischer Wert in $\frac{N}{m^2}$
 \item Flächenträgheitsmoment $I$:
-	\parbox[t]{\linewidth}{
+	\subitem \parbox[t]{\linewidth}{
 	Formspezifischer Wert in $m^4$}
 \item Streckenlast $q(x)$:
 	\subitem \parbox[t]{\linewidth}{
