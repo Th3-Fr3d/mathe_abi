@@ -70,7 +70,7 @@ Um die Fläche von $x_{min}$ bis $x_{max}$ unter der Funktion $f(x)$ zu bestimme
 $$\int_{x_{min}}^{x_{max}} f(x)\ dx = F(x_{max}) - F(x_{min}) = [F(x)]_{x_{min}}^{x_{max}}$$
 \textbf{Beispiel}:\\
 Gegeben sei $f(x) = 2x^3 + 4x + 2$, $x_{min} = 1$ und $x_{max} = 5$.
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(x) & = 2x^3 + 4x + 2\\
 \int_1^5 f(x)\ dx & = F(5) - F(1)\\
@@ -79,11 +79,11 @@ f(x) & = 2x^3 + 4x + 2\\
 \int_1^5 f(x)\ dx & = 372.5 - 4.5\\
 \int_1^5 f(x)\ dx & = \underline{\underline{368}}
 \end{split}
-\end{equation}
+\end{equation*}
 \subsubsection{1. Sonderfall: $x_{min} = 0$}
 Wenn $x_{min} = 0$ ist, dann ist $F(x_{min}) = 0$, dashalb kann die Untergrenze vernachlässigt werden.
 Gegeben sei $f(x) = 2x^3 + 4x + 2$, $x_{min} = 0$ und $x_{max} = 5$.
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(x) & = 2x^3 + 4x + 2\\
 \int_0^5 f(x)\ dx & = F(5) - F(0)\\
@@ -91,12 +91,12 @@ f(x) & = 2x^3 + 4x + 2\\
 \int_0^5 f(x)\ dx & = \Bigg{(}\frac{2}{4} \cdot 5^4 + 2\cdot 5^2 + 2 \cdot 5\Bigg{)} - 0\\
 \int_0^5 f(x)\ dx & = \underline{\underline{372.5}}
 \end{split}
-\end{equation}
+\end{equation*}
 \subsubsection{2. Sonderfall: Nullstellen}
 Befindet sich eine oder mehrere Nullstelle(n) zwischen $x_{min}$ und $x_{max}$, so muss die Fläche an diesen geteilt und deren Beträge anschließend aufsummiert werden, 
 da es sich bei dem Abschnitt, bei dem gilt $f(x) < 0$, sonst um eine "negative Fläche" handeln würde. Bei einer Funktion $f(x) = x^3 + 1$ mit einer Nullstelle 
 $x_0$ bei $x = 1$ müssen die Ober und Untergrenzen zur bestimmung der Intervals von $x_{min} = -1$ bis $x_{max} = 5$ wie folgt gelegt werden:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(x) & = x^3 + 1\\
 \int_{-1}^5 f(x)\ dx & = \Bigg{|} \int_{-1}^1 f(x)\ dx \Bigg{|} + \Bigg{|} \int_1^5 f(x)\ dx\Bigg{|}\\
@@ -107,7 +107,7 @@ f(x) & = x^3 + 1\\
 \int_{-1}^5 f(x)\ dx & = \Bigg{|} 1.25 - (-1.25)\Bigg{|} + \Bigg{|} 161.25 - 1.25\Bigg{|}\\
 \int_{-1}^5 f(x)\ dx & = \underline{\underline{162.5}}
 \end{split}
-\end{equation}
+\end{equation*}
 \pagebreak
 \section{Rotationsvolumen}
 Beim Rotationsvolumen werden die Grundregel der Integralrechnungen benötigt. Das am Ende berechnete Volumen ist das der Funktion, welche entweder um die x-Achse oder die y-Achse rotiert wurde.
@@ -117,14 +117,14 @@ Mit dieser Formel zur Hand können wir eine Funktion $f(x)$ untersuchen.
 Zum Zweck der Berechnung benutzen wir einen Halbkreis, dessen Funktion $f(x) = \sqrt{9 - x^2}$ ist.
 Zum Zwecke der Berechnung gehen wir des weiteren davon aus (da diese breits berechnet wurden), dass die Nullstellen der Funktion 3 und -3 sind.
 Beweis: 
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(-3) & = \sqrt{9- (-3)^2} = \sqrt{9 - 9} = 0 \\
 f(3) & = \sqrt{9- 3^2}\ \ \ \ \ = \sqrt{9 - 9} = 0
 \end{split}    
-\end{equation}
+\end{equation*}
 Dann lässt sich auf folgende Weise das Volumen der rotierenden Halbkreisfunktion bestimmen:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(x) & = \sqrt{9 - x^2}\\
 V & = \pi \cdot \int_{-3}^3 (f(x)^2)\ dx\\
@@ -136,22 +136,22 @@ V & = \pi \cdot \Bigg{[}\Bigg{(} 27 - \frac{27}{3} \Bigg{)} - \Bigg{(} -27 - \fr
 V & = \pi \cdot [(27 - 9) - (-27 + 9)]\\
 V & = \pi \cdot [18 + 18] = \underline{\underline{36\pi}}
 \end{split}    
-\end{equation}
+\end{equation*}
 \pagebreak
 \subsection{Y-Achsenrotation}
 Ein besonderer Fall ist die bereits erwähnte Rotation um die y-Achse. Hierbei muss man wissen, dass die Funktion umgestellt werden muss.
 Geben wir nun vor, dass wir eine Funktion haben die $f(x) = x^3 + 4$ ist, dann kann man diese ganz einfach umstellen:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(x) = y & = x^3 + 4\\
 y - 4 & = x^3\\
 \sqrt[3]{y - 4} & = x\\
 \end{split}
-\end{equation}
+\end{equation*}
 Der Schnittpunkt mit der y-Achse ist ablesbar aus der Orginalfunktion und ist $y = 4$.
 Wir wollen die Volumen von dem y-Achsenabschnitt bis zur -1 berechnen. Demnach gilt für unser Integral $\pi \cdot \int_{-1}^{4} (\sqrt[3]{y - 4})^2 dy$ .
 Die Brechnung für das Volumen sieht wie folgt aus:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 V & = \pi \cdot \int_{-1}^{4} \Bigg{(}\sqrt[3]{y - 4}\Bigg{)}^2 dy\\
 V & = \pi \cdot \int_{-1}^{4} (y - 4)^{\frac{2}{3}} dy\\
@@ -161,38 +161,34 @@ V & = \pi \cdot \Bigg{[} \Bigg{(} \frac{3\cdot0^\frac{5}{3}}{5}\Bigg{)} - \Bigg{
 V & = \pi \cdot \Bigg{[} - \Bigg{(} -3\cdot5^\frac{2}{3}\Bigg{)} \Bigg{]}\\
 V & = \underline{\underline{\pi \cdot 3 \cdot 5^\frac{2}{3}}}
 \end{split}
-\end{equation}
+\end{equation*}
 \pagebreak
 \section{Abstandsberechnung Punkt-Funktion}
 Bei der Abstandsberechnung zwischen einem Punkt und einer Funktion greift man auf den Satz des Pythagoras zurück.
 Denn der kürzeste Weg zwischen zwei Punkten ist eine direkte Linie zwischen diesen, die mit $s_{AB} = \sqrt{(A_{x}-B_{x})^2 + (A_{y}-B_{y})^2}$ berechnen lässt.
 Mit der Annahme, dass eine Funktion aus unendlich vielen Punkten besteht müssen wir einfach den Punkt A oder B durch die Funktion ersetzen. Die Formel würde dann für eine Punkt A und eine Funktion $f(x)$ wie folgt lauten:
-\begin{equation}
-s(x) = \sqrt{(A_{x}-x)^2+(A_{y}-f(x))^2}
-\end{equation}
+$$s(x) = \sqrt{(A_{x}-x)^2+(A_{y}-f(x))^2}$$
 Mit der Annahme, dass wir einen Punkt A(5$|$9) haben und eine Funktion $f(x) = x^2 - 5x + 5$ können wir mit der Formel nun den Abstand zwischen den Punkten für alle Punkte berechnen:
-\begin{equation}
-s(x) = \sqrt{(5-x)^2+(9-(x^2-5x+5))^2}
-\end{equation}
+$$s(x) = \sqrt{(5-x)^2+(9-(x^2-5x+5))^2}$$
 Da das Ableiten der Funktion von Hand zu viel Zeit und Arbeit in Anspruch nehmen würde lösen wir den Rest mit dem CAS.
 Dabei müssen wir erst einmal die Ableitung der Funktion bestimmen.
 
 CAS:
-\begin{equation}
+\begin{equation*}
 \begin{split}
-s(x) := \sqrt{(5-x)^2+(9-(x^2-5x+5))^2}\\
-s'(x) := \frac{d}{dx}(s(x))\\
+s(x) & := \sqrt{(5-x)^2+(9-(x^2-5x+5))^2}\\
+s'(x) & := \frac{d}{dx}(s(x))\\
 \end{split}
-\end{equation}
+\end{equation*}
 Nachdem wir die Ableitung gebildet haben, müssen wir zu Hoch- und Tiefpunktbestimmung (und der damit verbundenen Distanz) die Nustellen der Ableitung bestimmen.
 
 CAS:
-\begin{equation}
+\begin{equation*}
 \begin{split}
-zeros(s'(x),x) \approx {[-0.556307,2.37158,5.68473]}\\
-s(zeros(s'(x),x)) \approx {[5.63017,10.5657,\underline{\underline{0.694116}}]}
+zeros(s'(x),x) & \approx {[-0.556307,2.37158,5.68473]}\\
+s(zeros(s'(x),x)) & \approx {[5.63017,10.5657,\underline{\underline{0.694116}}]}
 \end{split}
-\end{equation}
+\end{equation*}
 Der minimale Abstand der zwischen dem Punkt A(5$|$9) und der Funktion $f(x) = x^2 - 5x + 5$ ist $\approx{0.694116}$.
 \pagebreak
 \section{Kurvendiskussionen}
@@ -254,25 +250,25 @@ Dabei wird unterteilt in:
 	\subitem \parbox[t]{\linewidth}
 	{
 		Ein Übergang wird als knickfrei bezeichnet, wenn für einen Punkt $P$ am Rand des Definitionsbereiches von $g(x)$ gilt:
-		\begin{equation}
+		\begin{equation*}
 		\begin{split}
 		g(P_x) & = f(P_x)\\
 		g'(P_x) &  = f'(P_x)
 		\end{split}
-		\end{equation}
+		\end{equation*}
 		und $g(x)$ und $f(x)$ im Punkt $P$ die selbe Steigung haben. Somit handelt ees sich bei der gesuchten Funktion $f(x)$ um eine Funktion 3. Grades.
 	}
 \item Krümmungsruckfreier Übergang
 	\subitem \parbox[t]{\linewidth}
 	{
 		Ein Übergang wird als krümmungsruckfrei bezeichnet, wenn für einen Punkt $P$ am Rand des Definitionsbereiches von $g(x)$ gilt:
-		\begin{equation}
+		\begin{equation*}
 		\begin{split}
 		g(P_x) & = f(P_x)\\
 		g'(P_x) &  = f'(P_x)\\
 		g''(P_x) & = f''(P_x)
 		\end{split}
-		\end{equation}
+		\end{equation*}
 		und $g(x)$ und $f(x)$ im Punkt $P$ die selbe Steigung und den selben Krümmungskreis haben. Somit handelt ees sich bei der gesuchten Funktion $f(x)$ um eine Funktion 5. Grades.
 	}
 \end{itemize}
@@ -283,30 +279,30 @@ Die beiden Funktionen $g(x) = 3x-2, x \leq 1$ und $h(x) = 4, x \geq 3$ sollen kn
 \includegraphics[width=0.5\textwidth]{image1.png}
 \end{center}
 Somit handelt es sich bei der gesuchten Funktion um
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(x) & = ax^3 + bx^2 + cx + d\\
 f'(x) & = 3ax^2 + 2bx + c
 \end{split}
-\end{equation}
+\end{equation*}
 mit den folgenden Bedingungen:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 g(1) & = f(1)\\
 h(3) & = f(3)\\
 g'(1) & = f'(1)\\
 h'(1) & = f'(1)
 \end{split}
-\end{equation}
+\end{equation*}
 Daraus lässt sich folgendes Gleichungssystem aufstellen:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 3\cdot 1-2 & = a\cdot 1^3 + b\cdot 1^2 + c\cdot 1 + d\\
 4 & = a\cdot 3^3 + b\cdot 3^2 + c\cdot 3 + d\\
 3 & = 3a\cdot 1^2 + 2b \cdot 1 + c\\
 0 & = 3a\cdot 3^2 + 2b\cdot 3 + c
 \end{split}
-\end{equation}
+\end{equation*}
 Welches sich mit dem CAS lösen lässt:
 \[
 solve \Vast(
@@ -319,16 +315,16 @@ solve \Vast(
 ,\{a,b,c,d\}\Vast)
 \]
 Als Ergebnis erhalten wir:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 a & = 0\\
 b & = -0.75\\
 c & = 4.5\\
 d & = -2.75
 \end{split}
-\end{equation}
+\end{equation*}
 Somit ergibt sich für $f(x)$:
-$$f(x) = -0.75x^2 + 4.5x - 2.75$$
+$$f(x) = -0.75x^2 + 4.5x - 2.75,\ 1 \leq x \leq 3$$
 Eingezeichnet in das Koordinatensystem:
 \begin{center}
 \includegraphics[width=0.75\textwidth]{image2.png}
@@ -344,30 +340,30 @@ Eingezeichnet in das Koordinatensystem:
 	Formspezifischer Wert in $m^4$}
 \item Streckenlast $q(x)$:
 	\subitem \parbox[t]{\linewidth}{
-	\begin{equation}
+	\begin{equation*}
 	\begin{split}
 	w''''(x) & = \frac{1}{E \cdot I}q(x)\\
 	w''''(x) & = \frac{1}{E \cdot I} \cdot q
 	\end{split}
-	\end{equation}
+	\end{equation*}
 	in Newton pro Meter $\frac{N}{m}$}
 \item Querkraft $Q(x)$:
 	\subitem \parbox[t]{\linewidth}{
-	\begin{equation}
+	\begin{equation*}
 	\begin{split}
 	w'''(x) & = \frac{1}{E \cdot I}-Q(x)\\
 	w'''(x) & = \frac{1}{E \cdot I}\cdot (qx + c_1)
 	\end{split}
-	\end{equation}
+	\end{equation*}
 	in Newton $N$}
 \item Biegemoment $w''(x)$:
 	\subitem \parbox[t]{\linewidth}{
-	\begin{equation}
+	\begin{equation*}
 	\begin{split}
 	w''(x) & = \frac{1}{E \cdot I}-M(x)\\
 	w''(x) & = \frac{1}{E \cdot I}\cdot (\frac{1}{2} qx^2 + c_1 \cdot x + c_2)
 	\end{split}
-	\end{equation}
+	\end{equation*}
 	in Newtonmeter $Nm$}
 \item Steigung der Biegelinie $w'(x)$
 	\subitem $$w'(x) = \frac{1}{E \cdot I}\cdot (\frac{1}{6} qx^3 + \frac{1}{2} c_1x^2 + c_2x + c_3)$$
@@ -395,7 +391,7 @@ Eingezeichnet in das Koordinatensystem:
 \pagebreak
 \subsection{Mathematischer Ansatz \& Beispiel}
 Gegeben sei ein Träger für den gilt:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 E & = 200 \cdot 10^9 \frac{N}{m^2}\\
 I & = \frac{1}{12}(B \cdot H^3 - b \cdot h^3)\\
@@ -405,11 +401,11 @@ b & = 0.27\\
 h & = 0.47\\
 q(x) & = -8000 \frac{N}{m}
 \end{split}
-\end{equation}
+\end{equation*}
 Des Weiteren ist ein Festlager bei $x = 0$ und ein Loslager bei $x = 10$ bekannt.
 Es soll überprüft werden, ob das Biegemoment eines Trägers den Betrag von $150000 Nm$ überschreitet.
 Es lassen sich folgende Bedingungen aufstellen:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 w(0) & = 0\\
 w''(0) & = 0 \Rightarrow \frac{1}{e \cdot I} \cdot c_2 \Rightarrow \underline{\underline{c_2 = 0}}\\
@@ -418,24 +414,24 @@ w''(10) & = 0 \Rightarrow 0 = \frac{1}{e \cdot I} \cdot \Bigg{(}\frac{1}{2} \cdo
 0 & = -400000 + 10 \cdot c_1\\
 c_1 & = 40000
 \end{split}
-\end{equation}
+\end{equation*}
 Somit ist das Biegemoment $- M(x) = - \frac{1}{2} \cdot 8000x^2 + 40000x$ bzw $M(x) = \frac{1}{2} \cdot 8000x^2 - 40000x$ bekannt.
 Um die $x$-Stelle des maximale Biegemoment zu bestimmen wird $M'(x) = 0$ gesetzt.
-\begin{equation}
+\begin{equation*}
 \begin{split}
 M'(x) & = 0\\
 8000x - 40000 & = 0\\
 x & = 5
 \end{split}
-\end{equation}
+\end{equation*}
 Somit ist uns bekannt, dass das maximale Biegemoment bei $x = 5$ vorliegt.
 Nun berechnen wir das Biegemoment an $x = 5$.
-\begin{equation}
+\begin{equation*}
 \begin{split}
 M(5) & = 4000 \cdot 5^2 - 40000 \cdot 5\\
 M(5) & = -100000
 \end{split}
-\end{equation}
+\end{equation*}
 Somit hält der Träger, da
 $$|-100000| < 150000$$
 \section{Wachstumsfunktionen}
@@ -459,35 +455,35 @@ $$t_v = \frac{\ln{(2)}}{k}$$
 \subsubsection{Halbierungszeit}
 Für die Halbierungszeit $t_h$ gilt:
 $$t_h = \frac{\ln{(0.5)}}{k}$$
+\pagebreak
 \subsubsection{Wachstumsgeschwindigkeit}
 Die Wachstumsgeschwindigkeit zum Zeitpunkt $t$ entspricht der Ableitung der Wachstumsfunktion am Zeitpunkt $t$.
 Somit gilt:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(t) & = a \cdot e^{k \cdot t}\\
 f'(t) &= k \cdot a \cdot e^{k \cdot t}
 \end{split}
-\end{equation}
+\end{equation*}
 Also $$f'(t) = k \cdot f(t)$$
-\pagebreak
 \section{$e$ - Funktionen}
 Die Ableitung von $e^x$ bleibt $e^x$.\\
 Hat man also $f(x) = e^{2x}$, wird zu erst der Exponen betrachtet, als $2 \cdot x$, was sich zu $2$ ableitet.\\
 Diese $2$ ist wird jetzt vor das $e$ geschrieben, sodass sich für die Ableitung von $f(x) = e^{2x}$ $f'(x) = 2 \cdot e^{2x}$ ergibt.\\
 Es folgen einige Beispiele:\\
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(x) & = a \cdot e^{\frac{1}{a} \cdot x^2}\\
 f'(x) & = 2x \cdot e^{\frac{1}{a} \cdot x^2}
 \end{split}
-\end{equation}
+\end{equation*}
 Der Faktor $a$ kürzt sich mit der Ableitung $\frac{2x}{a}$ des Exponenten weg.
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f(x) & = e^{2x^2-3x}\\
 f'(x) & = 4x - 3 \cdot e^{2x^2-3x}
 \end{split}
-\end{equation}
+\end{equation*}
 da die Ableitung des Exponenten zum Faktor für die Basis, also $e^{...}$ wird.\\
 Bezüglich Logarithmen gilt:$$\ln{(e^{2x})} = 2x$$
 \pagebreak
@@ -576,13 +572,13 @@ zusammengefasst werden kann.
 Gegeben ist die Ebenengleichung $E : a \cdot x + b \cdot y + c \cdot z = d$, die in die Parameterform umgewandelt werden soll.\\
 Dazu wird zu erst durch Umformen der Gleichung eine Unbekannte eliminiert (z.B. $x = -\frac{b \cdot y}{a} - \frac{c \cdot z}{a} + \frac{d}{a}$).\\
 Da die Parameterform aus Vektoren besateht, schreiben wir die drei Gleichungen für die $x$, $y$ und $z$ Koordinaten untereinander:\\
-\begin{equation}
+\begin{equation*}
 \begin{split}
 x & = -\frac{b}{a} \cdot y - \frac{c}{a} \cdot z + \frac{1}{a} \cdot d\\
 y & = \ \ \ 1 \cdot y + 0\ \cdot z + 0 \cdot d\\
 z & = \ \ \ 0 \cdot y + 1\ \cdot z + 0 \cdot d\\
 \end{split}
-\end{equation}
+\end{equation*}
 Als Vektor ergibt sich somit:
 $$\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}-\frac{b}{a} \cdot y\\\ \ 1 \cdot y\\\ \ 0 \cdot y\end{pmatrix} + \begin{pmatrix}- \frac{c}{a}\cdot z\\\ \ 0 \cdot z\\\ \ 1 \cdot z\end{pmatrix} + \begin{pmatrix}\frac{1}{a} \cdot d\\0 \cdot d\\0 \cdot d\end{pmatrix}$$
 Ausmultipliziert:
@@ -625,13 +621,13 @@ Daraus ergibt sich die Koordinatenform der Ebene:
 $$x \cdot n_x + y \cdot n_y + z \cdot n_z = d$$
 Nun wird $g$ in die $x$, $y$ und $z$ Komponenten unterteilt.\\
 Es ergeben sich die drei Gleichungen:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 x & = u_x + t \cdot v_x\\
 y & = u_y + t \cdot v_y\\
 z & = u_z + t \cdot v_z
 \end{split}
-\end{equation}
+\end{equation*}
 welche nun in $E$ eingesetzt werden:
 $$(u_x + t \cdot v_x) \cdot n_x + (u_y + t \cdot v_y) \cdot n_y + (u_z + t \cdot v_z) \cdot n_z = d$$
 Nun wird nach $t$ aufgelöst und in $g$ eingesetzt. $g$ lässt sich anschließend als $\vec{s}$ ausmultiplizierten, was dem Schnittpunkt $S$ entspricht.
@@ -639,7 +635,7 @@ Nun wird nach $t$ aufgelöst und in $g$ eingesetzt. $g$ lässt sich anschließen
 Falls $g \in E$, so ergibt sich beim Berechnen des Schnittpunktes eine wahre Aussage.\\
 Des Weiteren gilt $g \parallel E$, also $\vec{v} \cdot (\vec{b} \times \vec{c}) = 0$.
 \subsection{CAS}
-Das Gleichungssystem oben (2) lässt sich mit dem CAS wie folgt lösen:\\
+Das Gleichungssystem oben (1) lässt sich mit dem CAS wie folgt lösen:\\
 \textit{menu} $\rightarrow$ \textit{3 : Algebra} $\rightarrow$ \textit{7 : Solve System of Equations} $\rightarrow$ \textit{1 : Solve System of Equations...}\\
 Falls der CAS:
 \begin{itemize}
@@ -652,13 +648,13 @@ Falls der CAS:
 Somit ergibt sich:
 $$\begin{pmatrix}p_x\\p_y\\p_z\end{pmatrix} = \begin{pmatrix}a_x\\a_y\\a_z\end{pmatrix} + r \cdot \begin{pmatrix}b_x\\b_y\\b_z\end{pmatrix} + s \cdot \begin{pmatrix}c_x\\c_y\\c_z\end{pmatrix}$$
 woraus sich 3 Gleichungen und 2 Unbekannte ergeben:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 p_x & = a_x + r \cdot b_x + s \cdot c_x\\ 
 p_y & = a_y + r \cdot b_y + s \cdot c_y\\ 
 p_z & = a_z + r \cdot b_z + s \cdot c_z
 \end{split}
-\end{equation}
+\end{equation*}
 Falls $P \in E$, dann lassen sich $r$ und $s$ berechnen.\\
 Falls $P \notin E$, so ergibt sich eine widersprüchliche Aussage.
 \subsection{CAS}
@@ -717,29 +713,29 @@ Dieses Gleichungssystem lässt sich zu einer Geradengleichung $g$ auflösen, sod
 $$g : \vec{x} = \vec{n} + s \cdot \vec{m}$$
 ergibt.
 \subsubsection{CAS}
-Das Gleichungssystem oben (5) lässt sich mit dem CAS wie folgt lösen:\\
+Das Gleichungssystem oben (2) lässt sich mit dem CAS wie folgt lösen:\\
 \textit{menu} $\rightarrow$ \textit{3 : Algebra} $\rightarrow$ \textit{7 : Solve System of Equations} $\rightarrow$ \textit{1 : Solve System of Equations...}
 \subsection{Koordinatenform}
 $$E_1 : a \cdot x + b \cdot y + c \cdot z = d$$
 $$E_2 : t \cdot x + u \cdot y + v \cdot z = w$$
 Dadurch ergeben sich zwei Gleichungen und drei Unbekannte, die sich nur teilweise auflösen lassen.\\
 Zum Beispiel:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 x & = y + i\\
 y & = y\\
 z & = j
 \end{split}
-\end{equation}
+\end{equation*}
 wobei $i$ und $j$ sich durch Auflösen des Gleichungssystems ergeben.\\
 Dadurch ergibt sich für $g$:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 g : \vec{x} & = \begin{pmatrix}y + i\\y\ \ \ \ \ \\\ \ \ \ \ j\end{pmatrix}\\
 g : \vec{x} & = \begin{pmatrix}y\\y\\0\end{pmatrix} + \begin{pmatrix}i\\0\\j\end{pmatrix}\\
 g : \vec{x} & = \begin{pmatrix}1\\1\\0\end{pmatrix} \cdot y + \begin{pmatrix}i\\0\\j\end{pmatrix}
 \end{split}
-\end{equation}
+\end{equation*}
 wobei durch das Ausklammern von $y$ der Richtungsvektor entsteht.
 \pagebreak
 \section{Winkel zwischen zwei Ebenen}
@@ -777,73 +773,95 @@ $$crossP(a,b)$$
 \pagebreak
 \part{STOCHASTIK}
 \subsection{Definitionen}
-\subsubsection{statistische Erhebungen}
-    - Die Durchführung einer Statistik
-    - (z.B. das Befrage von Personen / Zählen von Gegenständen)
-    
-\subsubsection{Merkmalsträger}
-    - Das untersuchte Objekt der Statistik
-    - (z.B. Personen oder Autos)
-    
-\subsubsection{Merkmal}
-    - Der im Zusammenhang mit dem Merkmalsträger untersuchte Wert
-    - (z.B. Größe/ Geschwindigkeit)
-    
-\subsubsection{Grundgesamtheit}
-    - Die Summe aller Merkmalsträger
-    
-\subsubsection{Stichprobe}
-    - ausgewählte Merkmalsträger der Grundgesamtheit
-
-\subsubsection{Stichprobenumfang}
-    - Die Anzahl n der Merkmalsträger einer Stichprobe
-    
-\subsubsection{Urliste}
-    - Die Beobachtugsliste (Datentabelle)
-    
-\subsubsection{Stichprobenwert}
-    - Ein Tabelleneintrag (eine Zeile)
-        
-\subsubsection{qualitative Merkmale}
-    - nominal- oder Ordinalskala
-    
-\subsubsection{quantitative Merkmale}
-    - Messbar mit Zahlenwerten (metrisch)
-    diskret: - nur ganze Zahlen / stetig: - Reelle Zahlen
-
-\subsubsection{absolute Häufigkeit $\Big(H(ai)\Big)$}
-    - bei n Stichprobenwerten tritt ein Merkmal H- mal auf
-    
-\subsubsection{relative Häufigkeit $\Big(h(ai)\Big)$}
-    - das Merkmal tritt in H/n aller Fälle auf (Bruch bzw \%)
-    
-\subsubsection{Häufigkeitstabelle / Häufigkeitsverteilung}
-    - Tabelle mit H und Merkmalen
-    
-\subsubsection{Klasseneinteilung}
-    - Einteilen von Intervallen in Teilintervalle (zur Reduzierung der 
-        Datenmenge)
-    - z.B Werte 10 - 20, Werte 20 - 30, etc
-\subsubsection{Histogramm}
-    - Diagramm, welches die Unterschiede verschiedener Klassen darstellt
-    
-\subsubsection{Häufigkeitspolygon}
-    - Der graph der durch Verbinden der Histogramm Werte entsteht
-    
-\subsubsection{Summenpolygon}
-    - die summe der Histogramm werte dargestellt als funktion
-
-\subsubsection{Spannweite $R$}
-    - die Differenz zwischen dem größten Stichprobenwert Xmax und dem kleinsten
-        Xmin
-
-\subsubsection{Standardabweichung $\sigma x$}
+\begin{itemize}
+\item Statistische Erhebungen
+	\subitem \parbox[t]{\linewidth}{
+	Die Durchführung einer Statistik\\
+    (z.B. das Befrage von Personen / Zählen von Gegenständen)\\
+	}
+\item Merkmalsträger
+	\subitem \parbox[t]{\linewidth}{
+	Das untersuchte Objekt der Statistik\\
+    (z.B. Personen oder Autos)
+	}
+\item Merkmal
+	\subitem \parbox[t]{\linewidth}{
+	Der im Zusammenhang mit dem Merkmalsträger untersuchte Wert\\
+    (z.B. Größe oder Geschwindigkeit)
+	}
+\item Grundgesamtheit
+	\subitem \parbox[t]{\linewidth}{
+	Die Summe aller Merkmalsträger
+	}
+\item Stichprobe
+	\subitem \parbox[t]{\linewidth}{
+	ausgewählte Merkmalsträger der Grundgesamtheit
+	}
+\item Stichprobenumfang
+	\subitem \parbox[t]{\linewidth}{
+	Die Anzahl $n$ der Merkmalsträger einer Stichprobe
+	}
+\item Urliste
+	\subitem \parbox[t]{\linewidth}{
+	Die Beobachtugsliste (Datentabelle)
+	}
+\item Stichprobenwert
+	\subitem \parbox[t]{\linewidth}{
+	Ein Tabelleneintrag (eine Zeile)
+	}
+\item Qualitative Merkmale
+	\subitem \parbox[t]{\linewidth}{
+	nominal- oder Ordinalskala
+	}
+\item Quantitative Merkmale
+	\subitem \parbox[t]{\linewidth}{
+	Messbar mit Zahlenwerten (metrisch)\\
+    - diskret: $n \in \mathbb{Z}$\\
+    - stetig: $n \in \mathbb{R}$
+	}
+\item Absolute Häufigkeit $H(ai)$
+	\subitem \parbox[t]{\linewidth}{
+	bei $n$ Stichprobenwerten tritt ein Merkmal $H$-mal auf
+	}
+\item Relative Häufigkeit $h(ai)$
+	\subitem \parbox[t]{\linewidth}{
+	das Merkmal tritt in H/n aller Fälle auf (Bruch bzw \%)
+	}
+\item Häufigkeitstabelle / Häufigkeitsverteilung
+	\subitem \parbox[t]{\linewidth}{
+	Tabelle mit H und Merkmalen
+	}
+\item Klasseneinteilung
+	\subitem \parbox[t]{\linewidth}{
+	Einteilen von Intervallen in Teilintervalle (zur Reduzierung der Datenmenge)\\
+    z.B Werte 10 - 20, Werte 20 - 30, etc
+	}
+\item Histogramm
+	\subitem \parbox[t]{\linewidth}{
+	Diagramm, welches die Unterschiede verschiedener Klassen darstellt
+	}
+\item Häufigkeitspolygon
+	\subitem \parbox[t]{\linewidth}{
+	Der Graph der durch Verbinden der Histogramm-Werte entsteht
+	}
+\item Summenpolygon
+	\subitem \parbox[t]{\linewidth}{
+	Die Summe der Histogramm werte dargestellt als Funktion
+	}
+\item Spannweite $R$
+	\subitem \parbox[t]{\linewidth}{
+	Die Differenz zwischen dem größten Stichprobenwert $X_{max}$ und dem kleinsten $X_{min}$
+	}
+\item Standardabweichung $\sigma x$
+	\subitem \parbox[t]{\linewidth}{
+	Durchschnittliche Abweichungen vom Mittelwert
+	}
+\end{itemize}
 \pagebreak
 \section{REGRESSION}
 \subsection{Korrelation r}
 Die Korrelation $r$ ist ein Maß für die Güte der Regression,
 also ein Maß für die Stärke des funktionalen Zusammenhangs.
-
 \begin{equation}
 \begin{split}
 ges.: g(x) & = mx\\
@@ -853,7 +871,7 @@ s'(m) & = 0\\
 r^2 & = mx \cdot my\\
 \end{split}
 \end{equation}
-(1) Berechnung der Abstände ohne Hilfsmittel
+(3) Berechnung der Abstände ohne Hilfsmittel
 \subsection{Aufgaben zur Regression}
 \subsubsection{Aufgabe 3}
 Eine der drei Geraden $g$ mit $g(x) = 0.2x + 1.5$, $h$ mit $h(x) = 0.4x + 0.8$
@@ -863,8 +881,8 @@ Entscheiden Sie ohne Verwendung des Regressionsbefehls des Rechners, welche. Dok
 Sie einen Lösungsweg, der auch ohne GTR oder CAS\\
 nachvollziehbar ist.\\
 \\
-RECHNUNG:\\
-\begin{equation}
+\textbf{Rechnung}:\\
+\begin{equation*}
 \begin{split}
 geg.: i(x) & = 0.5x + 0.5\\
 ges.: s\ \ \ \ &\\
@@ -874,7 +892,7 @@ s(0.5) & = (1 - (0.5 \cdot 0 + 0.5))^2 + (2 - (0.5 \cdot 2 + 0.5))^2 + (1 - (0.5
 &\ \ \ \ (4 - (0.5 \cdot 6 + 0.5))^2\\
 s(0.5) & = 3\\
 \end{split}
-\end{equation}
+\end{equation*}
 \pagebreak
 \subsubsection{Nicht-lineare Regression}
 In einen Behälter wird fortlaufend 20 Liter Flüssigkeit eingefüllt und dann jeweils die Füllhöhe $h$ gemessen.\\
@@ -882,7 +900,7 @@ In einen Behälter wird fortlaufend 20 Liter Flüssigkeit eingefüllt und dann j
 a.)\\
 Durch welche ganzrationale Funktion lässt sich der funktionale Zusammenhang uwischen der Füllhöhe $h$ und dem Volumen $V$
 am besten beschreiben? Vergleichen Sie Modellierungen mit ganzrationalen Funktionen 2., 3. und 4. Grades miteinander.\\\\
-\begin{equation}
+\begin{equation*}
 \begin{split}
 f1(x) & = 0.000868x^2 + 1.5x -12.63\\
 f2(x) & = -0.000132x^3+0.028x^2+0.0095x-1.06\\
@@ -891,7 +909,7 @@ r1^2 & = 0.981144\\
 r2^2 & = 0.999137\\
 r3^2 & = 0.9999\\
 \end{split}
-\end{equation}
+\end{equation*}
 (3) Somit ist die Regression 4. Grades am besten geeignet auf Grund der genausten Korrelation 
 \pagebreak
 \section{WAHRSCHEINLICHKEITEN}
@@ -918,14 +936,14 @@ $P_A(B) = \frac{P(A \cap B)}{P(A)}$\\
 Totale Wahrscheinlichkeit:\\
 $P(B) = P(A \cap B) + P(\overline{A} \cap B) = P(A) \cdot P_A(B) + P(\overline{A} \cdot P_{\overline{A}}(B))$\\
 \textbf{Satz von Bayes}\\
-\begin{equation}
+\begin{equation*}
 \begin{split}
 P_B(A) & = \frac{P(B \cap A)}{P(B)} = \frac{P(A \cap B)}{P(B)}\\
 \ \ \ \ \ & = \frac{P(A) \cdot P(B)}{P(A) \cdot P_A(B) + P(\overline{A}) \cdot P_{\overline{A}}(B)}
 \end{split}
-\end{equation}
+\end{equation*}
 \subsubsection{Totale Wahrscheinlichkeit}
-P(*ein Buchstabe*) die gesamtwahrscheinlichkeit für ein Ereignis\\
+$P(x)$ die Gesamtwahrscheinlichkeit für ein Ereignis $x$
 \subsubsection{Bedingte Wahrscheinlichkeit / Häufigkeit}
 Die zweite Bedingung in einem Baumdiagramm (Zweite Verzweigung)\\
 $P_{ersteBedingung}(zweiteBedingung)$\\
@@ -983,23 +1001,23 @@ Nicht-Repräsentativ:\ $\frac{2}{3}$ Jungen, $\frac{1}{3}$ Mädchen\\
 \subsubsection*{Additionssatz}
 Eine Kugellagerfabrik prüft Kugeln auf Abweichungen in Härte und Durchmesser.\\
 Bestimme die Häufigkeit der nicht einwandfreien Kugeln. 
-\begin{equation}
+\begin{equation*}
 \begin{split}
 P(d \cup h) & = P(d) + P(h) - P(d \cap h)\\
 P(d \cup h) & = \frac{65}{1000} + \frac{78}{1000} - \frac{43}{1000}\\
 P(d \cup h) & = \frac{1}{10}\\
 P(d \cup h) & = 10 \%\\
 \end{split}
-\end{equation}
+\end{equation*}
 \subsubsection*{Strickwaren 2. Wahl}
-\begin{equation}
+\begin{equation*}
 \begin{split}
 P(F_a \cup M_u \cup M_a) & = P(F_a) + P(M_u) + P(M_a) - P(F_a \cap M_u) - P(F_a \cap M_a) - P(M_u \cap M_a) + \\
 &\ \ \ \ P(F_a \cap M_u \cap M_a)\\
 P(F_a \cup M_u \cup M_a) & = 5.1 \% + 5.3 \% + 4.7 \% - 0.4 \% - 0.9 \% - 1.5 \% + 0.3 \% \\
 P(F_a \cup M_u \cup M_a) & = 12.6 \% \\
 \end{split}
-\end{equation}
+\end{equation*}
 \subsubsection*{Schulhefte}
 Kariert mit und ohne Rand und nicht Kariert\\
 \begin{table}[h!]
@@ -1034,18 +1052,18 @@ Kariert mit und ohne Rand und nicht Kariert\\
 \end{table}
 \subsubsection*{AB "Der Additionssatz" Nr 7}
 Wahrscheinlichkeit aus einem Skatspiel Herz oder König zu ziehen\\
-\begin{equation}
+\begin{equation*}
 \begin{split}
 P(k \cup h) & = P(k) + P(h) - P(k \cap h)\\
 P(d \cup h) & = \frac{1}{8} + \frac{1}{4} - \frac{1}{32}\\
 P(d \cup h) & = \frac{11}{32}\\
 P(d \cup h) & = \underline{\underline{34.375}} \%\\
 \end{split}
-\end{equation}
+\end{equation*}
 \subsubsection*{AB "Der Additionssatz" Nr 8}
 Wahrscheinlichkeit dass eine Zahl $i$ \textbf{nicht} durch 3 oder 5 teilbar ist, wenn gilt:\\
 $i$ in range(10, 100)\\
-\begin{equation}
+\begin{equation*}
 \begin{split}
 P(\overline{Mod_3} \cup \overline{Mod_5}) & = 100 - P(Mod_3) + P(Mod_5) - P(Mod_3 \cap Mod_5)\\
 P(Mod_3 \cup Mod_5) & = \frac{1}{3} + \frac{1}{5} - \frac{1}{15}\\
@@ -1054,17 +1072,17 @@ P(Mod_3 \cup Mod_5) & = 46.\overline{6} \%\\
 P(\overline{Mod_3} \cup \overline{Mod_5}) & = 100 \% - 46.\overline{6} \%\\
 P(\overline{Mod_3} \cup \overline{Mod_5}) & = 53.\overline{3} \%\\
 \end{split}
-\end{equation}
+\end{equation*}
 \subsubsection*{AB "Der Additionssatz" Nr 9}
 Wahrscheinlichkeit bei einem Multiple-Choice-Test bei 6 Fragen und 4 Antwortmöglichkeiten pro Frage 5 oder 6 antworten richtig zu beantworten.\\
-\begin{equation}
+\begin{equation*}
 \begin{split}
 P(R_5 \cup R_6) & = P(R_5) + P(R_6)\\
 P(R_5 \cup R_6) & = \Big(\frac{1}{4}\Big)^6 + 6 \cdot \Big(\frac{1}{4}\Big)^5 \cdot \frac{3}{4}\\
 P(R_5 \cup R_6) & = \frac{19}{4096}\\
 P(R_5 \cup R_6) & = \underline{\underline{0.464}} \%\\
 \end{split}
-\end{equation}
+\end{equation*}
 \pagebreak
 \subsubsection*{Seite 343 Nr 4}
 Geschlecht (\textbf{M}ännlich, \textbf{W}eiblich), Führerschein verloren (\textbf{J}a, \textbf{N}ein)
@@ -1106,17 +1124,12 @@ Geschlecht (\textbf{M}ännlich, \textbf{W}eiblich), Führerschein verloren (\tex
     \end{tabular}
   \end{center}
 \end{table}
-\subsubsection*{Seite 351 Nummer 5}
-F = Funktionstüchtig\\
-M = Messfahler\\
-E = Erkannt\\
-$P(\overline{F} \cap \overline{M} \cap E) = P(\overline{F} \cdot P(\overline{M}) \cdot P(E))$
 \pagebreak
 \section*{"n über k"}
 Definition:
 $$\begin{pmatrix}n\\k\end{pmatrix} = \frac{n!}{(n - k)! \cdot k!}$$
 Beispiel Pascal'sches Dreieck
-\begin{equation}
+\begin{equation*}
 \begin{split}
 (a + b)^0 & = 1\\
 (a + b)^1 & = 1a + 1b\\
@@ -1125,7 +1138,7 @@ Beispiel Pascal'sches Dreieck
 (a + b)^4 & = 1a^4b^0 + 4a^3b^1 + 6a^2b^2 + 4a^1b^3 + 1a^0b^4\\
 (a + b)^n & = \begin{pmatrix}n\\0\end{pmatrix} \cdot a^nb^0 + \begin{pmatrix}n\\1\end{pmatrix} \cdot a^{n-1}b^1 +\ ...\ + \begin{pmatrix}n\\n\end{pmatrix} \cdot a^0b^n\\
 \end{split}
-\end{equation}
+\end{equation*}
 \section*{Formel von Bernoulli}
 \large{Bedingungen:}\\
 - mit zurückliegenden (gleichbleibenden) Pfadwahrscheinlichkeiten\\
@@ -1147,9 +1160,13 @@ Wenn $\mu$ Nachkommastellen hat:\\
 $\mu = (n + 1) \cdot p$ ohne Nachkommastellen.
 Standardabweichung $\sigma = \sqrt{n \cdot p \cdot (1 - p)}$ (Maß für Streuung)\\
 $\sigma$-Regeln gelten nur, wenn $\sigma >$ 3\\
-$$\sigma = \sqrt{n \cdot p \cdot (1 - p)} > 3$$\\
-$$ = n \cdot p \cdot (1 - p) > 9$$\\
-$$ = n \cdot 0.25 > 9$$\\
+\begin{equation*}
+\begin{split}
+\sigma & = \sqrt{n \cdot p \cdot (1 - p)} > 3\\
+\sigma & = n \cdot p \cdot (1 - p) > 9\\
+\sigma & = n \cdot 0.25 > 9\\
+\end{split}
+\end{equation*}
 $n$ muss groß sein, damit die $\sigma$ -Regeln anwendbar sind.\\
 $$B(\mu - c \cdot \sigma \leq x \leq \mu + c \cdot \sigma) = \gamma$$\\
 $\gamma$ entspricht der gewünschten \% - Zahl\\
@@ -1169,12 +1186,13 @@ $\gamma$ entspricht der gewünschten \% - Zahl\\
   \end{center}
 \end{table}
 $$V(p) = n \cdot p \cdot (1 - p)$$\\
+\pagebreak
 \subsection*{Variante 1}
 $V'(p) = 0$\\
 $solve\large{(}0 = \frac{d}{d\ p} (n \cdot p \cdot (1 - p)),p\large{)}$\\
 $p = \frac{1}{2}$\\
 \subsection*{Variante 2}
-\begin{equation}
+\begin{equation*}
 \begin{split}
 V(p) & = n \cdot p \cdot (1 - p)\\
 V(p) & = n \cdot (p - p^{2})\\
@@ -1184,9 +1202,9 @@ V'(p) & = -2 \cdot p \cdot n + n\\
 1 & = 2 \cdot p\\
 p & = \frac{1}{2}\\
 \end{split}
-\end{equation}
+\end{equation*}
 \subsection*{Variante 3}
-\begin{equation}
+\begin{equation*}
 \begin{split}
 \sigma & = \sqrt{n \cdot (p - p^{2})}\\
 \sigma'(p) & = \frac{1 \cdot n \cdot (1 - 2 \cdot p)}{2 \cdot \sqrt{n \cdot (p - p^{2})}}\\
@@ -1194,60 +1212,86 @@ p & = \frac{1}{2}\\
 0 & = 1 - 2 \cdot p\\
 p & = \frac{1}{2}\\
 \end{split}
-\end{equation}
+\end{equation*}
 \pagebreak
 \section{Von der Gesamtheit auf die Stichprobe}
 \subsection*{Seite 405 Nummer 14}
 \textbf{geg}.:\\
-$n = 3700$\\
-$x \equalhat$ Anzahl der Gewinne\\
-$p = \frac{1}{37}$\\
-$\gamma = 95\% \rightarrow c = 1.96$\\
+\begin{equation*}
+\begin{split}
+n & = 3700\\
+x & \equalhat \text{Anzahl der Gewinne}\\
+p & = \frac{1}{37}\\
+\gamma & = 95\% \rightarrow c = 1.96
+\end{split}
+\end{equation*}
 \textbf{ges}.:\\
 $x_{1}$\\
 $x_{2}$\\
-\textbf{Rechnung}:\\
-$\mu = n \cdot p = 3700 \cdot \frac{1}{37}$\\
-$\mu = 100$\\
-$\sigma = \sqrt{3700 \cdot \frac{1}{37} \cdot (1 - \frac{1}{37}})$\\
-$\sigma = 9.86$\\
-$B_{3700, \frac{1}{37}}(\mu - 1.96 \cdot \sigma \leq x \leq \mu + 1.96 \cdot \sigma) > 95 \%$\\
-$x_{1} = \mu - 1.96 \cdot \sigma$\\
-$x_{1} = 80.67 \approx 81$\\
-$x_{2} = \mu + 1.96 \cdot \sigma$\\
-$x_{2} = 119.32 \approx 119$\\
+\textbf{Rechnung}:
+\begin{equation*}
+\begin{split}
+\mu & = n \cdot p = 3700 \cdot \frac{1}{37}\\
+\mu & = 100\\
+\sigma & = \sqrt{3700 \cdot \frac{1}{37} \cdot (1 - \frac{1}{37}})\\
+\sigma & = 9.86
+\end{split}
+\end{equation*}
+Somit ergibt sich:
+$$B_{3700, \frac{1}{37}}(\mu - 1.96 \cdot \sigma \leq x \leq \mu + 1.96 \cdot \sigma) > 95 \%$$
+Und für $x_1$ und $x_2$:
+\begin{equation*}
+\begin{split}
+x_{1} & = \mu - 1.96 \cdot \sigma\\
+x_{1} & = 80.67 \approx 81\\
+x_{2} & = \mu + 1.96 \cdot \sigma\\
+x_{2} & = 119.32 \approx 119
+\end{split}
+\end{equation*}
 CAS:\\
 $binomcdf(3700, \frac{1}{37}, 81, 119)$\\
-$B_{3700, \frac{1}{37}}(\mu - 1.96 \cdot \sigma \leq x \leq \mu + 1.96 \cdot \sigma) = 95.22 \%$\\
+$B_{3700, \frac{1}{37}}(\mu - 1.96 \cdot \sigma \leq x \leq \mu + 1.96 \cdot \sigma) = \underline{\underline{95.22 \%}}$\\
 \pagebreak
 \subsection*{Seite 404 Nummer 11}
-\textbf{geg}.:\\
-$x \equalhat$ Anzahl der benötigten Betten\\
-$n = 400$\\
-$p = 88\%$\\
-$\gamma = 90\% \Rightarrow c = 1.64$\\
+\textbf{geg}.:
+\begin{equation*}
+\begin{split}
+x & \equalhat \text{Anzahl der benötigten Betten}\\
+n & = 400\\
+p & = 88\%\\
+\gamma & = 90\% \Rightarrow c = 1.64
+\end{split}
+\end{equation*}
 \textbf{ges}.:\\
-$x_{1}$\\
-$x_{2}$\\
+$$x_{1}$$
+$$x_{2}$$
 \textbf{Rechnung}:\\
-$\mu = p \cdot n = 0.88 \cdot 400 = 352$\\
-$\sigma = \sqrt{400 \cdot 0.88 \cdot (1 - 0.88)}$\\
-$\sigma = 6.499$\\
-$x_{1} = 352 - 1.64 \cdot 6.499$\\
-$x_{1} = 341,341 \approx 341$\\
-$x_{2} = 352 + 1.64 \cdot 6.499$\\
-$x_{2} = 362,76 \approx 362$\\
-$B_{400, 0.88}(341 \leq x \leq 362) = 90.9\%$\\
+\begin{equation*}
+\begin{split}
+\mu & = p \cdot n = 0.88 \cdot 400 = 352\\
+\sigma & = \sqrt{400 \cdot 0.88 \cdot (1 - 0.88)}\\
+\sigma & = 6.499\\
+x_{1} & = 352 - 1.64 \cdot 6.499\\
+x_{1} & = 341,341 \approx 341\\
+x_{2} & = 352 + 1.64 \cdot 6.499\\
+x_{2} & = 362,76 \approx 362\\
+B_{400, 0.88}(341 \leq x \leq 362) & = \underline{\underline{90.9\%}}
+\end{split}
+\end{equation*}
 \pagebreak
 \section{Von der Stichprobe auf die Gesamtheit}
-\textbf{geg}.:\\
-$n = 500$\\
-$H = x = 273$\\
-$h = \frac{273}{500}$\\
-$\gamma = 95\% \Rightarrow c = 1.96$\\
-$x \equalhat$ Anzahl der Stimmen für Oberbürgermeister\\
+\textbf{geg}.:
+\begin{equation*}
+\begin{split}
+n & = 500\\
+H & = x = 273\\
+h & = \frac{273}{500}\\
+\gamma & = 95\% \Rightarrow c = 1.96\\
+x & \equalhat \text{Anzahl der Stimmen für Oberbürgermeister}
+\end{split}
+\end{equation*}
 \textbf{ges}.:\\
-$p$\\
+$$p$$
 \textbf{Es gilt:}\\
 $$B(\mu - c \cdot \sigma \leq x \leq \mu + c \cdot \sigma) = \gamma$$
 \textbf{Also}
@@ -1274,13 +1318,17 @@ Es wurden zufällig viele "Gegner" des Oberbürgermeisters befragt.\\
 Weniger Stimmen für den Oberbürgermeister, als es der tatsächliche Anteil der Gesamtbevölkerung sein wird.\\
 \pagebreak
 \section{n unbekannt}
-geg.:\\
-$x_{1} = 100$\\
-$p = \frac{1}{3}$\\
-$\gamma = 80\% \Rightarrow c = 1.28$\\
-$x \equalhat$ Anzahl von Personen mit Blutgruppe A\\
-ges.:\\
-n\\
+geg.:
+\begin{equation*}
+\begin{split}
+x_{1} & = 100\\
+p & = \frac{1}{3}\\
+\gamma & = 80\% \Rightarrow c = 1.28\\
+x & \equalhat \text{Anzahl an Personen mit Blutgruppe A}
+\end{split}
+\end{equation*}
+ges.:
+$$n$$
 Rechnung:\\
 $$B_{n, \frac{1}{3}}(\mu - 1.28 \cdot \sigma \leq x \leq \mu + 1.28 \cdot \sigma) = 0.8$$
 $$\mu - 1.28 \cdot \sigma = 100$$
@@ -1293,16 +1341,24 @@ $$binomCdf(334,\frac{1}{3}, 100, 334 \cdot \frac{1}{3} - 1.28 \cdot \sqrt{334 \c
 $$n = 334$$
 \pagebreak
 \section{Wahl eines Stichprobenumfangs}
-geg.:\\
-$\gamma = 95\% \Rightarrow c = 1.96$\\
-Genauigkeit $1\% \Rightarrow d = 0.01$\\
-ges.:\\
-$n$\\
-Ansatz:\\
-$$\mid \frac{x}{n} - p \mid\ \leq d$$
-$$\mid \frac{n}{n} - p \mid\ \leq c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}} \leq d$$
-$$\Rightarrow c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}} \leq d$$
-$$c^{2} \cdot \frac{p \cdot (1 - p)}{n} \leq d^{2}$$
+geg.:
+\begin{equation*}
+\begin{split}
+\gamma = 95\% & \Rightarrow c = 1.96\\
+\text{Genauigkeit }1\% & \Rightarrow d = 0.01
+\end{split}
+\end{equation*}
+ges.:
+$$n$$
+Ansatz:
+\begin{equation*}
+\begin{split}
+\Big{|} \frac{x}{n} - p \Big{|}\ & \leq d\\
+\Big{|} \frac{n}{n} - p \Big{|}\ & \leq c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}} \leq d\\
+\Rightarrow c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}} & \leq d\\
+c^{2} \cdot \frac{p \cdot (1 - p)}{n} & \leq d^{2}
+\end{split}
+\end{equation*}
 \subsection{1. Möglichkeit}
 p ist ungefähr bekannt:\\
 p = *geschätzter wert*\\
