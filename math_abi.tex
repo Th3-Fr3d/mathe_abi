@@ -163,6 +163,38 @@ V & = \underline{\underline{\pi \cdot 3 \cdot 5^\frac{2}{3}}}
 \end{split}
 \end{equation}
 \pagebreak
+\section{Abstandsberechnung Punkt-Funktion}
+Bei der Abstandsberechnung zwischen einem Punkt und einer Funktion greift man auf den Satz des Pythagoras zurück.
+Denn der kürzeste Weg zwischen zwei Punkten ist eine direkte Linie zwischen diesen, die mit $s_{AB} = \sqrt{(A_{x}-B_{x})^2 + (A_{y}-B_{y})^2}$ berechnen lässt.
+Mit der Annahme, dass eine Funktion aus unendlich vielen Punkten besteht müssen wir einfach den Punkt A oder B durch die Funktion ersetzen. Die Formel würde dann für eine Punkt A und eine Funktion $f(x)$ wie folgt lauten:
+\begin{equation}
+s(x) = \sqrt{(A_{x}-x)^2+(A_{y}-f(x))^2}
+\end{equation}
+Mit der Annahme, dass wir einen Punkt A(5$|$9) haben und eine Funktion $f(x) = x^2 - 5x + 5$ können wir mit der Formel nun den Abstand zwischen den Punkten für alle Punkte berechnen:
+\begin{equation}
+s(x) = \sqrt{(5-x)^2+(9-(x^2-5x+5))^2}
+\end{equation}
+Da das Ableiten der Funktion von Hand zu viel Zeit und Arbeit in Anspruch nehmen würde lösen wir den Rest mit dem CAS.
+Dabei müssen wir erst einmal die Ableitung der Funktion bestimmen.
+
+CAS:
+\begin{equation}
+\begin{split}
+s(x) := \sqrt{(5-x)^2+(9-(x^2-5x+5))^2}\\
+s'(x) := \frac{d}{dx}(s(x))\\
+\end{split}
+\end{equation}
+Nachdem wir die Ableitung gebildet haben, müssen wir zu Hoch- und Tiefpunktbestimmung (und der damit verbundenen Distanz) die Nustellen der Ableitung bestimmen.
+
+CAS:
+\begin{equation}
+\begin{split}
+zeros(s'(x),x) \approx {[-0.556307,2.37158,5.68473]}\\
+s(zeros(s'(x),x)) \approx {[5.63017,10.5657,\underline{\underline{0.694116}}]}
+\end{split}
+\end{equation}
+Der minimale Abstand der zwischen dem Punkt A(5$|$9) und der Funktion $f(x) = x^2 - 5x + 5$ ist $\approx{0.694116}$.
+\pagebreak
 \section{Kurvendiskussionen}
 Die Funktion $f(x)$ soll untersucht werden.
 \subsection{Symmetrie}
