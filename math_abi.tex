@@ -1,7 +1,8 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8x]{inputenc}
-\usepackage{scalerel,stackengine,graphicx,amsmath,amssymb,pgf,gensymb,booktabs,wrapfig,lipsum}
+\usepackage{scalerel,stackengine,graphicx,amsmath,amssymb,pgf,gensymb,booktabs,wrapfig,lipsum,placeins}
 \usepackage[english]{babel}
+
 \graphicspath{{./images/}}
 \newcommand\equalhat{\mathrel{\stackon[1.5pt]{=}{\stretchto{%
     \scalerel*[\widthof{=}]{\wedge}{\rule{1ex}{3ex}}}{0.5ex}}}}
@@ -21,8 +22,13 @@
 	\and
 	Lennard Rizkallah\\
 }
-\title{MATHE 12/13}
+\font\titlefont=cmr10 at 40pt
+\title{{\titlefont MATHE ABI}}
 \maketitle
+\begin{center}
+Mit Unterstützung von\\
+\large{Elaine Buchholz}
+\end{center}
 \pagebreak
 \tableofcontents{}
 \pagebreak
@@ -291,7 +297,7 @@ mit den folgenden Bedingungen:
 g(1) & = f(1)\\
 h(3) & = f(3)\\
 g'(1) & = f'(1)\\
-h'(1) & = f'(1)
+h'(3) & = f'(3)
 \end{split}
 \end{equation*}
 Daraus lässt sich folgendes Gleichungssystem aufstellen:
@@ -487,6 +493,125 @@ f'(x) & = 4x - 3 \cdot e^{2x^2-3x}
 da die Ableitung des Exponenten zum Faktor für die Basis, also $e^{...}$ wird.\\
 Bezüglich Logarithmen gilt:$$\ln{(e^{2x})} = 2x$$
 \pagebreak
+\section{Begrenztes Wachstum}
+\subsection{Generell}
+Generell gilt für begrenzte Wachstumsfunktionen:
+$$f(t) = s + [f(0) - s] \cdot e^{-k \cdot t}$$
+Wobei für den Verlauf der Wachstumsgeschwindigkeit gilt:
+$$f'(t) = -k \cdot [f(0) - s] \cdot e^{-k \cdot t}$$
+Die Differentialgleichung leitet sich wie folgt aus der Wachstumsgeschwindigkeit her:
+\begin{equation*}
+\begin{split}
+f'(t) & = -k \cdot \Big{(}f(0) - s\Big{)} \cdot e^{-k \cdot t}\\
+f'(t) & = -k \cdot \Big{(}f(0) - s\Big{)} \cdot e^{-k \cdot t} + s - s\\
+f'(t) & = -k \cdot \Big{(}f(t) - s\Big{)}\\
+f'(t) & = k \cdot s - k \cdot f(t) - s\\
+\end{split}
+\end{equation*}
+Wobei für die Wachstumskonstante gilt $k < 0$
+\subsection{Wachstum}
+Für begrenztes Wachstum gilt $a < 0$
+\subsection{Zerfall}
+Für begrenzten Zerfall gilt $a > 0$
+\pagebreak
+\subsection{Begrenztes Wachstum (CAS + Regression)}
+\begin{table}[h!]
+  \begin{center}
+    \caption{Begrenztes Wachstum mit Regression}
+    \label{tab:table1}
+    \begin{tabular}{l|l} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \textbf{Mathematischer Ansatz} & \textbf{Ansatzt CAS}\\
+      \hline
+      $f(t) = s + \Big{(}f(0) -s\Big{)} \cdot e^{-k \cdot t}$ & $f(x) = a \cdot b^x$\\
+      $f(t) = s + a \cdot e^{-k \cdot t}$ & 
+    \end{tabular}
+  \end{center}
+\end{table}
+$e^{-k}$ aus dem mathemetischen Ansatz etspricht hierbei $b$ aus dem CAS Ansatz.
+Da der CAS mit dem $s$ aus dem mathematischen Ansatz nicht klar kommt müssen die Werte vor der Regression angepasst werden.
+Während normalerweise also gilt:
+\FloatBarrier
+\begin{table}[h!]
+  \begin{center}
+    \label{tab:table1}
+    \begin{tabular}{l|l} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      $t$ & $f(t)$\\
+      \hline
+      $t_1$ & $f(t_1)$\\
+      $t_2$ & $f(t_2)$\\
+      ... & ...
+    \end{tabular}
+  \end{center}
+\end{table}
+\FloatBarrier
+Gilt für die Regression mit dem CAS:
+\FloatBarrier
+\begin{table}[h!]
+  \begin{center}
+    \label{tab:table1}
+    \begin{tabular}{l|l} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      $t$ & $f(t) - s$\\
+      \hline
+      $t_1$ & $f(t_1) - s$\\
+      $t_2$ & $f(t_2) - s$\\
+      ... & ...
+    \end{tabular}
+  \end{center}
+\end{table}
+\FloatBarrier
+Nun kann mit dem CAS die exponentielle Regression durchgeführt werden. Für die Umwandlung von der CAS in die normale Schreibweise gilt:
+$$f(t) = s + a \cdot e^{-\ln(b) \cdot t}$$
+Wobei $a$ und $c$ den vom CAS errechneten Werten entsprechen.\\
+\textbf{Anmerung}\\
+Der CAS ist scheinbar nicht in der Lage mit negativen Werten zu rechnen.\\
+Wenn also gilt $f(t) - s < 0$ müssen die Werte mit dem Faktor $-1$ multipliziert werden.
+\pagebreak
+
+
+\section{Logistisches Wachstum}
+Bei logistischen Wachstumsfunktionen handelt es sich um eine Art begrenztes Wachstum, wobei die Besonderheit hier die Wendestelle $X_w$ bei $\frac{s}{2}$, 
+also bei der Hälfte der Sättigungsgrenze darstellt.\\
+\subsection{Funktionsansatz}
+Für logistisches Wachstum gilt:
+$$f(t) = \frac{1}{1-\Big{(}\frac{s}{f(0)} - 1\Big{)} \cdot e^{-s\cdot k \cdot t}}$$
+bezeihungsweise
+$$f(t) = \frac{a \cdot s}{a + (s - a) \cdot e^{-s \cdot k \cdot t}}$$
+\subsection{Differentialgleichung (DGL)}
+Die Differentialgleichung ist bei Logistischem Wachstum wie folgt definiert:
+$$f'(t) = k \cdot f(t) \cdot (s - f(t))$$
+\subsection{Berechnung der Wendestelle $X_w$}
+Da generell für Wendestellen $f''(t) = 0$ gilt, lässt sich folgende Formel herleiten:
+$$X_w = \frac{\ln{\Big{(}\frac{s}{f(0)} - 1\Big{)}}}{k \cdot s}$$
+Wobei für $f(X_w)$ gilt:
+$$f(X_w) = \frac{s}{2}$$
+\pagebreak
+\subsection{Beispiel}
+Eingezeichnet in ein Koordinatensystem sehen logistische Wachstumsfunktionen wie folgt aus:
+\begin{center}
+\includegraphics[width=1\textwidth]{image3.png}
+\end{center}
+\subsection{Regression + CAS}
+Während allgemein der Funktionsansatz
+$$f(t) = \frac{s}{1+\Big{(} \frac{s}{f(0)} - 1\Big{)} \cdot e^{-k \cdot s \cdot t}}$$
+gilt für die Logistische Regression mit dem CAS der Ansatz:
+$$f(x) = \frac{c}{1 +  a\cdot e^{-b\cdot x}}$$
+Simit gilt für $a$, $b$ und $c$:
+\begin{equation*}
+\begin{split}
+a & = s\\
+b & = \Big{(} \frac{s}{f(0)} - 1 \Big{)}\\
+c & = k \cdot s
+\end{split}
+\end{equation*}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%																VEKTOREN
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \part{VEKTOREN}
 \section{Ortsvektoren}
 Der Ortsvektor eines Punktes $P$ geht vom Ursprung $O$ nach $P$. Somit gilt $\vec{p} = \vec{OP}$.
@@ -536,10 +661,16 @@ Somit lassen sich die 2 Gleichungen nach den beiden Unbekannten $r$ und $s$ aufl
 $r$ und $s$ werden nun in $\vec{d}$ eingesetzt und $|\vec{d}|$ kann berechnet werden:
 $$|\vec{d}| = \sqrt{d_{x}^{2} + d_{y}^{2} + d_{z}^{2}}$$
 \subsection{CAS}
-$solve(dotP(d,b) = 0,r)$, das Ergebnis für $r$ einsetzen und\\
-$solve(dotP(d,w) = 0,s)$.\\
-Beides in $d$ einsetzen.\\
-$norm(d) \rightarrow$ done.
+\[
+solve \Bigg{(}
+\begin{cases}
+dotP(d,w) = 0\\
+dotP(d,b) = 0
+\end{cases}
+,\{r,s\}\Bigg{)}
+\]
+$r$ und $s$ in $d$ einsetzen.\\
+$$|\vec{d}| = norm(d)$$
 \pagebreak
 \section{Kreuzprodukt und Normalenvektor}
 Der Normalenvektor $\vec{n}$ steht senkrecht auf der Ebene $E$.\\
@@ -1302,6 +1433,7 @@ $$n \cdot p - c \cdot \sqrt{n \cdot p \cdot (1 - p)} \leq x \leq n \cdot p + c \
 $$p - c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}} \leq \frac{x}{n} \leq p + c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}}$$
 \textbf{Also}\\
 $$p - 1.96 \cdot \sqrt{\frac{p \cdot (1 - p)}{500}} \leq \frac{x}{500} \leq p + 1.96 \cdot \sqrt{\frac{p \cdot (1 - p)}{500}}$$
+\pagebreak
 \textbf{Daraus ergibt sich}\\
 $$f_{1}(p) = p - 1.96 \cdot \sqrt{\frac{p \cdot (1 - p)}{500}}$$
 $$f_{2}(p) = p + 1.96 \cdot \sqrt{\frac{p \cdot (1 - p)}{500}}$$
@@ -1316,6 +1448,12 @@ Mehr Stimmen für den Oberbürgermeister, als es der tatsächliche Anteil der Ge
 \subsection*{3. Fall: $x < \mu$}
 Es wurden zufällig viele "Gegner" des Oberbürgermeisters befragt.\\
 Weniger Stimmen für den Oberbürgermeister, als es der tatsächliche Anteil der Gesamtbevölkerung sein wird.\\
+\subsection*{Vertrauensintervall}
+Das Vertrauensintervall gibt an zu welcher Wahrscheinlichkeit $p$ in dem errechneten Bereich zwischen $p_{min}$ und $p_{max}$ liegt.
+\begin{center}
+\includegraphics[width=1.1\textwidth]{image4.png}
+\end{center}
+Bei $h$ handelt es sich um die relative Häufigkeit der gemessenen Werte, es gilt also $h = \frac{X}{n}$
 \pagebreak
 \section{n unbekannt}
 geg.:
@@ -1354,7 +1492,7 @@ Ansatz:
 \begin{equation*}
 \begin{split}
 \Big{|} \frac{x}{n} - p \Big{|}\ & \leq d\\
-\Big{|} \frac{n}{n} - p \Big{|}\ & \leq c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}} \leq d\\
+\Big{|} \frac{x}{n} - p \Big{|}\ & \leq c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}} \leq d\\
 \Rightarrow c \cdot \sqrt{\frac{p \cdot (1 - p)}{n}} & \leq d\\
 c^{2} \cdot \frac{p \cdot (1 - p)}{n} & \leq d^{2}
 \end{split}
